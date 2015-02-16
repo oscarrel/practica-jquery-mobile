@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Practica jquery-mobile</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="themes/CalificApp.min.css" />
+    <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body class="ui-mobile-viewport ui-overlay-a">
+
+    <!-- Start of first page: #login -->
+    <div id="login" data-role="page" data-url="login" tabindex="0" class="ui-page ui-page-active" style="">
+
+        <div data-role="header" role="banner" class="ui-header ui-bar-a">
+            <h1 class="ui-title" role="heading" aria-level="1">CalificApp</h1>
+        </div>
+        <!-- /header -->
+        <div data-role="header" class="ui-header ui-bar-a" role="banner">
+            <h1 class="ui-title" role="heading" aria-level="1">LOGIN</h1>
+        </div>
+        <form class="ui-content" role="main">
+            <div class="ui-field-contain">
+                <label for="usuario">Usuario</label>
+                <input type="text" data-clear-btn="true" name="usuario" id="usuario" placeholder="Introduce nombre de usuario" value="">    
+
+                <label for="pass">Password"</label>
+                <input type="password" data-clear-btn="true" autocomplete="off" name="pass" id="pass" placeholder="Introduce password" value="">  
+            </div>
+            <a data-role="button" href="#seleccion" class="ui-link ui-btn ui-shadow ui-corner-all" role="button">ENTRAR</a>
+        </form>
+
+        <!-- /content -->
+
+        <div data-theme="a" data-role="footer" role="contentinfo" class="ui-footer ui-bar-a">
+            <h4 class="ui-title" role="heading" aria-level="1">CalificApp</h4>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /page one -->
+
+    <!-- Start of second page: #seleccion -->
+    <div data-theme="a" id="seleccion" data-role="page" data-url="seleccion">
+        <div data-role="footer">
+            <div data-role="navbar" data-iconpos="left">
+                <ul>
+                    <li><a href="#" role="heading" data-icon="grid" class="ui-btn-active">LOGIN</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /navbar -->
+        </div>
+        <!-- /footer -->
+        <div data-role="header">
+            <h1>Two</h1>
+        </div>
+        <!-- /header -->
+
+        <div class="ui-content" role="main">
+            <h2>Two</h2>
+            <p>I have an id of "two" on my page container. I'm the second page container in this multi-page template.</p>
+            <p>Notice that the theme is different for this page because we've added a few <code>data-theme</code> swatch assigments here to show off how flexible it is. You can add any content or widget to these pages, but we're keeping these simple.</p>
+            <p><a class="ui-btn ui-shadow ui-corner-all ui-btn-b" data-direction="reverse" href="#one">Back to page "one"</a>
+            </p>
+
+        </div>
+        <!-- /content -->
+
+        <div data-role="footer">
+            <h4>Page Footer</h4>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /page two -->
+
+    <!-- Start of third page: #popup -->
+    <div id="popup" data-role="page" data-url="popup">
+
+        <div data-theme="b" data-role="header">
+            <h1>Dialog</h1>
+        </div>
+        <!-- /header -->
+
+        <div class="ui-content" role="main">
+            <h2>Popup</h2>
+            <p>I have an id of "popup" on my page container and only look like a dialog because the link to me had a <code>data-rel="dialog"</code> attribute which gives me this inset look and a <code>data-transition="pop"</code> attribute to change the transition to pop. Without this, I'd be styled as a normal page.</p>
+            <p><a class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left" data-rel="back" href="#one">Back to page "one"</a>
+            </p>
+        </div>
+        <!-- /content -->
+
+        <div data-role="footer">
+            <h4>Page Footer</h4>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /page popup -->
+
+
+
+    <div class="ui-loader ui-corner-all ui-body-a ui-loader-default"><span class="ui-icon-loading"></span>
+        <h1>loading</h1>
+    </div>
+</body>
+
+</html>
