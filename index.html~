@@ -20,7 +20,7 @@
         <div data-role="header" role="banner" class="ui-header ui-bar-a">
             <h1 class="ui-title" role="heading" aria-level="1">CalificApp</h1>
         </div>
-
+<<<<<<< HEAD
         <div data-role="header" class="ui-header ui-bar-a" role="banner">
             <h1 class="ui-title ui-icon-user ui-btn-icon-left ui-mini" role="heading" aria-level="1">LOGIN</h1>
         </div>
@@ -37,14 +37,39 @@
         </form>
         <!-- /content -->
         
+=======
+        <!-- /header -->
+        <div data-role="header" class="ui-header ui-bar-a" role="banner">
+            <h1 class="ui-title" role="heading" aria-level="1">LOGIN</h1>
+        </div>
+        <form class="ui-content" role="main">
+            <div class="ui-field-contain">
+                <label for="usuario">Usuario</label>
+                <input type="text" data-clear-btn="true" name="usuario" id="usuario" placeholder="Introduce nombre de usuario" value="">    
+
+                <label for="pass">Password"</label>
+                <input type="password" data-clear-btn="true" autocomplete="off" name="pass" id="pass" placeholder="Introduce password" value="">  
+            </div>
+            <a data-role="button" href="#seleccion" class="ui-link ui-btn ui-shadow ui-corner-all" role="button">ENTRAR</a>
+        </form>
+
+        <!-- /content -->
+
+>>>>>>> 86fb19732de30379f458b2e6bcc221e02af9b0d1
         <div data-theme="a" data-role="footer" role="contentinfo" class="ui-footer ui-bar-a">
             <h4 class="ui-title" role="heading" aria-level="1">CalificApp</h4>
         </div>
         <!-- /footer -->
+<<<<<<< HEAD
+        
+=======
+>>>>>>> 86fb19732de30379f458b2e6bcc221e02af9b0d1
     </div>
     <!-- /page one -->
 
     <!-- Start of second page: #seleccion -->
+<<<<<<< HEAD
+
     <div data-theme="a" id="seleccion" data-role="page" data-url="seleccion">
         <div data-role="header" role="banner" class="ui-header ui-bar-a">
             <h1 class="ui-title" role="heading" aria-level="1">CalificApp</h1>
@@ -87,11 +112,43 @@
 
         <div data-theme="a" data-role="footer" role="contentinfo" class="ui-footer ui-bar-a">
             <h4 class="ui-title" role="heading" aria-level="1">CalificApp</h4>
+=======
+    <div data-theme="a" id="seleccion" data-role="page" data-url="seleccion">
+        <div data-role="footer">
+            <div data-role="navbar" data-iconpos="left">
+                <ul>
+                    <li><a href="#" role="heading" data-icon="grid" class="ui-btn-active">LOGIN</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /navbar -->
+        </div>
+        <!-- /footer -->
+        <div data-role="header">
+            <h1>Two</h1>
+        </div>
+        <!-- /header -->
+
+        <div class="ui-content" role="main">
+            <h2>Two</h2>
+            <p>I have an id of "two" on my page container. I'm the second page container in this multi-page template.</p>
+            <p>Notice that the theme is different for this page because we've added a few <code>data-theme</code> swatch assigments here to show off how flexible it is. You can add any content or widget to these pages, but we're keeping these simple.</p>
+            <p><a class="ui-btn ui-shadow ui-corner-all ui-btn-b" data-direction="reverse" href="#one">Back to page "one"</a>
+            </p>
+
+        </div>
+        <!-- /content -->
+
+        <div data-role="footer">
+            <h4>Page Footer</h4>
+>>>>>>> 86fb19732de30379f458b2e6bcc221e02af9b0d1
         </div>
         <!-- /footer -->
     </div>
     <!-- /page two -->
-  
+
+<<<<<<< HEAD
+   
    <!-- Start of third page: #calificacion -->
    
    
@@ -109,7 +166,8 @@
    
    
    
-
+=======
+>>>>>>> 86fb19732de30379f458b2e6bcc221e02af9b0d1
     <!-- Start of third page: #popup -->
     <div id="popup" data-role="page" data-url="popup">
 
