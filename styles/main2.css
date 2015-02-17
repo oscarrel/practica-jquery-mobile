@@ -1,0 +1,126 @@
+/*ESTILOS GENERALES*/
+
+body {
+  background: #fafafa;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+  margin: 0 auto;
+}
+
+header, footer {
+  background: #223A91;
+  color: lightblue;
+  padding: 10px;
+  text-align: center;
+}
+
+header h1 {
+
+}
+
+
+
+.box {
+  border: 1px solid #777;
+  background: #ddd;
+  margin: 10px;
+}
+
+.box header, .box footer {
+  background: lightblue;
+  padding: 10px;
+}
+
+.box header h2 {
+  margin: 0;
+  color: #223A91;
+  display: block;
+}
+
+.box .boxBody {
+  padding: 10px;
+}
+
+
+/* LOGIN */
+
+.box footer a {
+  margin-bottom: 10px;
+  display: block;
+  color: #223A91;
+}
+
+/* CURSOS */
+
+
+/* EVALUACION */
+
+
+fieldset {
+  background: #3388CC;
+  margin-bottom: 20px !important;
+
+}
+
+fieldset legend {
+  text-align: center;
+  color: #fff;
+   padding: 20px;
+}
+
+.ui-controlgroup-vertical .ui-btn.ui-first-child {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+/* media queries */
+
+@media screen and (max-width: 800px) {
+
+  .ui-field-contain > label, .ui-field-contain .ui-controlgroup-label, .ui-field-contain > .ui-rangeslider > label {
+      float: none;
+      margin: none;
+      width: auto;
+  }
+
+
+.ui-field-contain > label ~ [class*="ui-"], .ui-field-contain .ui-controlgroup-controls {
+    float: none;
+    width: auto;
+}
+
+
+.ui-grid-c > .ui-block-a, .ui-grid-c > .ui-block-b, .ui-grid-c > .ui-block-c, .ui-grid-c > .ui-block-d {
+    width: 50%;
+}
+
+}
+
+@media screen and (min-width: 800px) {
+
+
+.ui-grid-c > .ui-block-a, .ui-grid-c > .ui-block-b, .ui-grid-c > .ui-block-c, .ui-grid-c > .ui-block-d {
+    width: 25%;
+}
+
+
+  .ui-controlgroup-vertical .ui-btn.ui-first-child {
+    border-top-right-radius: inherit;
+  }
+
+  .ui-controlgroup-vertical .ui-btn.ui-last-child {
+    border-bottom-left-radius: 0;
+  }
+
+  
+.ui-field-contain > label ~ [class*="ui-"], .ui-field-contain .ui-controlgroup-controls {
+    float: left;
+    width: 78%;
+}
+  
+  .ui-field-contain > label, .ui-field-contain .ui-controlgroup-label, .ui-field-contain > .ui-rangeslider > label {
+      float: left;
+      margin: 0.5em 2% 0 0;
+      width: 20%;
+  }
+}

@@ -1,111 +1,144 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>jQuery Mobile Demo</title>
-        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
-        <script jquery.mobile-1.4.5.js></script>
-    </head>
-    <body>
-        <!-- Main Page-->
-        <div data-role="page" id="main">
-            <div data-role="header">
-                <a href="index.html" data-icon="delete">Cancelar</a>
-                <h1>
-                    Pedir pizza
-                </h1>
-                <a href="index.html" data-icon="check">Guardar</a>
+
+<head>
+    <title>Practica jquery-mobile</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="themes/CalificApp.min.css" />
+    <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body class="ui-mobile-viewport ui-overlay-a">
+
+    <!-- Start of first page: #login -->
+    <div id="login" data-role="page" data-url="login" tabindex="0" class="ui-page ui-page-active" style="">
+
+        <div data-role="header" role="banner" class="ui-header ui-bar-a">
+            <h1 class="ui-title" role="heading" aria-level="1">CalificApp</h1>
+        </div>
+        <div data-role="header" class="ui-header ui-bar-a" role="banner">
+            <h1 class="ui-title ui-icon-user ui-btn-icon-left ui-mini" role="heading" aria-level="1">LOGIN</h1>
+        </div>
+        <!-- /header -->
+        
+        <form class="ui-content" role="main">
+            <div class="ui-field-contain">
+                <label for="usuario">Usuario</label>
+                <input type="text" data-clear-btn="true" name="usuario" id="usuario" placeholder="Introduce nombre de usuario" value="">
+                <label for="pass">Password</label>
+                <input type="password" data-clear-btn="true" autocomplete="off" name="pass" id="pass" placeholder="Introduce password" value="">
             </div>
-            <div data-role="content">
-                <form action="#" method="get">
-                    <h2>
-                        Formulario para pedir una pizza:
-                    </h2>
-                    <div data-role="fieldcontain">
-                        <fieldset data-role="controlgroup">
-                            <legend>
-                                Escoje la base:
-                            </legend>
-                            <input type="radio" name="radio-choice-1" id="radio-choice-1" value="choice-1" checked="checked" />
-                            <label for="radio-choice-1">
-                                Fina y crujiente
-                            </label>
-                            <input type="radio" name="radio-choice-1" id="radio-choice-2" value="choice-2" />
-                            <label for="radio-choice-2">
-                                Queso gratinado
-                            </label>
-                            <input type="radio" name="radio-choice-1" id="radio-choice-3" value="choice-3" />
-                            <label for="radio-choice-3">
-                                Gorda y esponjosa
-                            </label>
-                        </fieldset>
-                    </div>
-                    <div data-role="fieldcontain">
-                        <fieldset data-role="controlgroup">
-                            <legend>
-                                Elige los ingredientes de la pizza:
-                            </legend>
-                            <input type="checkbox" name="checkbox-1a" id="checkbox-1a" class="custom" />
-                            <label for="checkbox-1a">
-                                Champiñones
-                            </label>
-                            <input type="checkbox" name="checkbox-2a" id="checkbox-2a" class="custom" />
-                            <label for="checkbox-2a">
-                                Aceitunas negras
-                            </label>
-                            <input type="checkbox" name="checkbox-3a" id="checkbox-3a" class="custom" />
-                            <label for="checkbox-3a">
-                                Pimientos
-                            </label>
-                            <input type="checkbox" name="checkbox-4a" id="checkbox-4a" class="custom" />
-                            <label for="checkbox-4a">
-                                Cebolla
-                            </label>
-                        </fieldset>
-                    </div>
-                    <div data-role="fieldcontain">
-                        <fieldset data-role="controlgroup" data-type="horizontal">
-                            <legend>
-                                Ingredientes para no vegetarianos:
-                            </legend>
-                            <input type="checkbox" name="checkbox-6" id="checkbox-6" class="custom" />
-                            <label for="checkbox-6">
-                                Chorizo
-                            </label>
-                            <input type="checkbox" name="checkbox-7" id="checkbox-7" class="custom" />
-                            <label for="checkbox-7">
-                                Jamón Serrano
-                            </label>
-                            <input type="checkbox" name="checkbox-8" id="checkbox-8" class="custom"  />
-                            <label for="checkbox-8">
-                                Carne picada
-                            </label>
-                        </fieldset>
-                    </div>
-                    <div data-role="fieldcontain">
-                        <fieldset data-role="controlgroup" data-type="horizontal">
-                            <legend>
-                                Forma de pago:
-                            </legend>
-                            <input type="radio" name="radio-choice-b" id="radio-choice-c" value="on" checked="checked" />
-                            <label for="radio-choice-c">
-                                Metálico
-                            </label>
-                            <input type="radio" name="radio-choice-b" id="radio-choice-d" value="off" />
-                            <label for="radio-choice-d">
-                                Cupón
-                            </label>
-                            <input type="radio" name="radio-choice-b" id="radio-choice-e" value="other"/>
-                            <label for="radio-choice-e">
-                                Tarjeta crédito
-                            </label>
-                        </fieldset>
-                    </div>
-                </form>
-            </div>
-            <div data-role="footer" >
-                <p>Pizzeria CPIFP Los Enlaces </p>
+            <a data-role="button" href="#seleccion" class="ui-link ui-btn ui-shadow ui-corner-all" role="button">ENTRAR</a>
+        </form>
+        <!-- /content -->
+        
+        <div data-theme="a" data-role="footer" role="contentinfo" class="ui-footer ui-bar-a">
+            <h4 class="ui-title" role="heading" aria-level="1">CalificApp</h4>
+        </div>
+        <!-- /footer -->
+        
+    </div>
+    <!-- /page one -->
+
+    <!-- Start of second page: #seleccion -->
+
+    <div data-theme="a" id="seleccion" data-role="page" data-url="seleccion">
+        <div data-role="header" role="banner" class="ui-header ui-bar-a">
+            <h1 class="ui-title" role="heading" aria-level="1">CalificApp</h1>
+        </div>
+        <div data-role="footer">
+            <!-- /navbar -->
+            <div data-role="navbar" data-iconpos="left" class="ui-navbar" role="navigation">
+                <ul class="ui-grid-a">
+                    <li class="ui-block-a"><a href="#login" class="ui-link ui-btn ui-btn-icon-left ui-icon-user ">LOGOUT</a>
+                    </li>
+                    <li class="ui-block-b"><a href="#seleccion" class="ui-btn-active ui-state-persist ui-link ui-btn ui-btn-icon-left ui-icon-bars" title="Seleccionar alumno">SELECCIÓN</a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </body>
+        <div class="ui-content" role="main">
+            <form>
+                <div class="ui-field-contain">
+                    <select name="selectgrado" id="selectgrado">
+                        <option value="-1">Selecciona curso y grado:</option>
+                        <option value="1">DAM - 1º</option>
+                        <option value="2">DAM - 2º</option>
+                        <option value="3">DAW - 1º</option>
+                        <option value="4">DAW - 2º</option>
+                    </select>
+                </div>
+                <div class="ui-field-contain">
+                    <select name="selectalumno" id="selectalumno">
+                       <option value="-1">Selecciona alumno:</option>
+                        <option value="1">AlumnoA</option>
+                        <option value="2">AlumnoB</option>
+                        <option value="3">AlumnoC</option>
+                        <option value="4">AlumnoD</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+        <a data-role="button" href="#seleccion" class="ui-link ui-btn ui-shadow ui-corner-all" role="button">COMENZAR</a>
+        <!-- /content -->
+
+        <div data-theme="a" data-role="footer" role="contentinfo" class="ui-footer ui-bar-a">
+            <h4 class="ui-title" role="heading" aria-level="1">CalificApp</h4>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /page two -->
+
+   
+   <!-- Start of third page: #calificacion -->
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+    <!-- Start of third page: #popup -->
+    <div id="popup" data-role="page" data-url="popup">
+
+        <div data-theme="b" data-role="header">
+            <h1>Dialog</h1>
+        </div>
+        <!-- /header -->
+
+        <div class="ui-content" role="main">
+            <h2>Popup</h2>
+            <p>I have an id of "popup" on my page container and only look like a dialog because the link to me had a <code>data-rel="dialog"</code> attribute which gives me this inset look and a <code>data-transition="pop"</code> attribute to change the transition to pop. Without this, I'd be styled as a normal page.</p>
+            <p><a class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left" data-rel="back" href="#one">Back to page "one"</a>
+            </p>
+        </div>
+        <!-- /content -->
+
+        <div data-role="footer">
+            <h4>Page Footer</h4>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /page popup -->
+
+
+
+    <div class="ui-loader ui-corner-all ui-body-a ui-loader-default"><span class="ui-icon-loading"></span>
+        <h1>loading</h1>
+    </div>
+</body>
+
 </html>

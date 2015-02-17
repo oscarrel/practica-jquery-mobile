@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Formulario</title>
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+    </head>
+    <body>
+        <!-- Página 1-->
+        <div data-role="page" id="main">
+            <div data-role="header">
+                <a href="index.html" data-icon="delete">Cancelar</a>
+                <h1>
+                    Editar contacto
+                </h1>
+                <a href="index.html" data-icon="check">Guardar</a>
+            </div>
+            <div data-role="content">
+                <form action="#" method="get">
+                    <h2>
+                        Formulario básico
+                    </h2>
+                    <div data-role="fieldcontain">
+                        <label for="name">
+                            Nombre:
+                        </label>
+                        <input type="text" name="name" id="name" value="" />
+                    </div>
+                    <div data-role="fieldcontain">
+                        <label for="textarea">
+                            Descripción:
+                        </label>
+                        <textarea cols="40" rows="8" name="textarea" id="textarea">
+                        </textarea>
+                    </div>
+                    <div data-role="fieldcontain">
+                        <label for="search">
+                            Buscar:
+                        </label>
+                        <input type="search" name="search" id="search" value="" />
+                    </div>
+                </form>
+            </div>
+            <div data-role="footer" class="ui-bar">
+                <a href="index.html" data-role="button" data-icon="delete">Quitar</a>
+                <a href="index.html" data-role="button" data-icon="plus">Añadir</a>
+                <a href="index.html" data-role="button" data-icon="arrow-u">Anterior</a>
+                <a href="index.html" data-role="button" data-icon="arrow-d">Siguiente</a>
+            </div>
+        </div>
+        <!-- Fin página 1 -->
+    </body>
+</html>

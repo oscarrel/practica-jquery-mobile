@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Eventos con jQueryMobile</title>
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $("#tap").on("tap", function() {
+                    alert("TapEvent");
+                });
+                $("#taphold").on("taphold", function() {
+                    alert("Tap Hold Event");
+                });
+                $("#swipe").on("swipe", function() {
+                    alert("Swipe Event");
+                });
+                $("#swipeleft").on("swipeleft", function() {
+                    alert("Swipe Left Event");
+                });
+                $("#swiperight").on("swiperight", function() {
+                    alert("Swipe Right Event");
+                });
+                $(window).on('orientationchange', function(event){
+                    $("#placeholder").html("Se ha cambiado la orientación a: "+event.orientation);
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div data-role="page" id="main">
+            <div data-role="header">
+                <h1>
+                    Eventos en jQueryMobile
+                </h1>
+            </div>
+            <div data-role="content">
+                <h3>
+                    Eventos de cambio de orientación:
+                </h3>
+                <h3>
+                    Eventos táctiles:
+                </h3>
+                <p id="tap">
+                    Pulsa aquí
+                </p>
+                <p id="taphold">
+                    Pulsa y manten el dedo al menos 1s
+                </p>
+                <p id="swipe">
+                    Desliza el dedo
+                </p>
+                <p id="swipeleft">
+                    Desliza el dedo hacia la izqda
+                </p>
+                <p id="swiperight">
+                    Desliza el dedo hacia la dcha.
+                </p>
+            </div>
+            <div data-role="footer" class="ui-bar">
+                <h1>
+                    Footer
+                </h1>
+            </div>
+        </div>
+    </body>
+</html>
