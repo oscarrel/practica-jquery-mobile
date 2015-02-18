@@ -2,19 +2,20 @@
 .ui-bar-a {
     border-top-width: 1px;
 }
+
 .ui-mobile label,
 div.ui-controlgroup-label {
     font-weight: bold;
 }
+
 .ui-input-text,
 .ui-input-search {
     border-width: 0;
 }
 
-div.ui-controlgroup-label{
+div.ui-controlgroup-label {
     margin: 0 0 0 15px !important;
 }
-
 /*
 fieldset legend {
     padding: 15px;
@@ -24,3 +25,35 @@ fieldset legend {
     color: white;
 }
 */
+
+.footer-button-left,
+.footer-button-right {
+    position: absolute;
+    margin: 0;
+    top: auto;
+    bottom: 0.24em;
+}
+
+.footer-button-left {
+    left: 0.4em;
+}
+
+.footer-button-right {
+    right: 0.4em;
+}
+
+.ui-input-text.ui-body-inherit.ui-corner-all.ui-shadow-inset.ui-input-has-clear {
+    margin-bottom: 10px;
+}
+
+.primer{
+    text-align: left;
+}
+
+#selecciona {
+    padding: .1em 1em .1em 1em;
+}
+
+#selec_mod, #selec_alum{
+    margin: 0;
+}

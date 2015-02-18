@@ -15,24 +15,27 @@
 
 <body class="ui-mobile-viewport ui-overlay-a">
 
-    <!-- Start of first page: #login -->
+    <!-- Comienzo pagina 1: #login -->
     <div id="login" data-role="page" data-url="login" tabindex="0" class="ui-page ui-page-active" style="">
 
         <div data-role="header" role="banner" class="ui-header ui-bar-a">
-            <h1 class="ui-title" role="heading" aria-level="1">Bienvenido a CalificApp</h1>
-        </div>
-
-        <div data-role="header" class="ui-header ui-bar-a" role="banner">
-            <h1 class="ui-title ui-icon-user ui-btn-icon-left ui-mini" role="heading" aria-level="1">ACCESO A USUARIO</h1>
+            <h1 class="ui-title" role="heading" aria-level="1" title=">Bienvenido a CalificApp">CalificApp</h1>
         </div>
         <!-- /header -->
+        <div data-role="navbar" data-iconpos="left" class="ui-navbar" role="navigation">
+            <ul class="ui-grid-a">
+                <li class="ui-block-b"><a href="#seleccion" class="ui-btn-active ui-state-persist ui-link ui-btn ui-btn-icon-top ui-icon-user" title="Introduce datos para loguearte">LOGIN</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /navbar -->
 
         <form class="ui-content" role="main">
             <div class="ui-field-contain">
                 <label for="usuario">Usuario</label>
-                <input type="text" data-clear-btn="true" name="usuario" id="usuario" placeholder="Introduce nombre de usuario" value="">
+                <input type="text" data-clear-btn="true" name="usuario" id="usuario" placeholder="Introduce nombre de usuario" value="" title="Introduce nombre de usuario">
                 <label for="pass">Password</label>
-                <input type="password" data-clear-btn="true" autocomplete="off" name="pass" id="pass" placeholder="Introduce password" value="">
+                <input type="password" data-clear-btn="true" autocomplete="off" name="pass" id="pass" placeholder="Introduce password" value="" title="Introduce password">
             </div>
             <a data-role="button" href="#seleccion" class="ui-link ui-btn ui-shadow ui-corner-all" role="button">ENTRAR</a>
         </form>
@@ -43,38 +46,36 @@
         </div>
         <!-- /footer -->
     </div>
-    <!-- /page one -->
+    <!-- /pagina 1 -->
 
-    <!-- Start of second page: #seleccion -->
+    <!-- Comienzo pagina 2: #seleccion -->
     <div data-theme="a" id="seleccion" data-role="page" data-url="seleccion">
         <div data-role="header" role="banner" class="ui-header ui-bar-a">
             <h1 class="ui-title" role="heading" aria-level="1">CalificApp</h1>
         </div>
-        <div data-role="footer">
-            <!-- /navbar -->
-            <div data-role="navbar" data-iconpos="left" class="ui-navbar" role="navigation">
-                <ul class="ui-grid-a">
-                    <li class="ui-block-a"><a href="#login" class="ui-link ui-btn ui-btn-icon-left ui-icon-user ">SALIR</a>
-                    </li>
-                    <li class="ui-block-b"><a href="#seleccion" class="ui-btn-active ui-state-persist ui-link ui-btn ui-btn-icon-left ui-icon-bars" title="Seleccionar alumno">SELECCIÓN</a>
-                    </li>
-                </ul>
-            </div>
+        <!-- /header -->
+        <div data-role="navbar" data-iconpos="left" class="ui-navbar" role="navigation">
+            <ul class="ui-grid-a">
+                <li class="ui-block-b"><a href="#seleccion" class="ui-btn-active ui-state-persist ui-link ui-btn ui-btn-icon-top ui-icon-bars" title="Seleccionar módulo y alumno">SELECCIÓN</a>
+                </li>
+            </ul>
         </div>
-        <div class="ui-content" role="main">
+        <!-- /navbar -->
+
+        <div id="selecciona" class="ui-content" role="main">
             <form>
-                <div class="ui-field-contain">
-                    <select name="selectgrado" id="selectgrado">
-                        <option value="-1">Selecciona curso y grado:</option>
+                <div id="selec_mod" class="ui-field-contain">
+                    <select name="selectgrado" id="selectgrado" title="Seleccionar módulo y curso">
+                        <option class="primer" value="-1">Módulo y curso:</option>
                         <option value="1">DAM - 1º</option>
                         <option value="2">DAM - 2º</option>
                         <option value="3">DAW - 1º</option>
                         <option value="4">DAW - 2º</option>
                     </select>
                 </div>
-                <div class="ui-field-contain">
-                    <select name="selectalumno" id="selectalumno">
-                        <option value="-1">Selecciona alumno:</option>
+                <div id="selec_alum" class="ui-field-contain">
+                    <select name="selectalumno" id="selectalumno" title="Seleccionar alumno">
+                        <option class="primer" value="-1">Alumno:</option>
                         <option value="1">AlumnoA</option>
                         <option value="2">AlumnoB</option>
                         <option value="3">AlumnoC</option>
@@ -88,6 +89,7 @@
 
         <div data-theme="a" data-role="footer" role="contentinfo" class="ui-footer ui-bar-a">
             <h4 class="ui-title" role="heading" aria-level="1">CalificApp</h4>
+            <a href="#login" class="ui-btn ui-corner-all ui-btn-inline ui-mini footer-button-right ui-btn-icon-left ui-icon-power">SALIR</a>
         </div>
         <!-- /footer -->
     </div>
@@ -96,7 +98,7 @@
     <!-- Start of three page: #calificacion -->
 
     <div data-theme="a" id="calificacion" data-role="page" data-url="calificacion">
-        <div data-role="header" role="banner" class="ui-header ui-bar-a">
+        <div data-role="header" role="banner" class="ui-header ui-bar-a" data-add-back-btn="true" data-back-btn-text="SELECCIÓN">
             <h1 class="ui-title" role="heading" aria-level="1">CalificApp</h1>
         </div>
         <div data-role="footer">
@@ -105,8 +107,6 @@
                 <ul class="ui-grid-a">
                     <li class="ui-block-a"><a href="#login" class="ui-link ui-btn ui-btn-icon-left ui-icon-user ">SALIR</a>
                     </li>
-                    <li class="ui-block-b"><a href="#seleccion" class="ui-link ui-btn ui-btn-icon-left ui-icon-bars">SELECCIÓN</a>
-                    </li>
                     <li class="ui-block-b"><a href="#seleccion" class="ui-btn-active ui-state-persist ui-link ui-btn ui-btn-icon-left ui-icon-check">EVALUACIÓN</a>
                     </li>
                 </ul>
@@ -114,36 +114,36 @@
         </div>
         <div class="ui-field-contain">
             <fieldset data-role="controlgroup" data-type="horizontal">
-               <!--de arriba class="ui-controlgroup ui-controlgroup-vertical ui-corner-all"-->
-               <!--class="ui-corner-all"-->
+                <!--de arriba class="ui-controlgroup ui-controlgroup-vertical ui-corner-all"-->
+                <!--class="ui-corner-all"-->
                 <legend>Entrada del alumno:</legend>
-                    <input type="radio" name="radio-choice-h-1" id="radio-choice-h-1a" value="1" checked="checked">
-                    <label for="radio-choice-h-1a">1</label>
-                    <input type="radio" name="radio-choice-h-1" id="radio-choice-h-1b" value="2">
-                    <label for="radio-choice-h-1b">2</label>
-                    <input type="radio" name="radio-choice-h-1" id="radio-choice-h-1c" value="3">
-                    <label for="radio-choice-h-1c">3</label>
-                    <input type="radio" name="radio-choice-h-1" id="radio-choice-h-1d" value="4">
-                    <label for="radio-choice-h-1d">4</label>
-                    <input type="radio" name="radio-choice-h-1" id="radio-choice-h-1e" value="5">
-                    <label for="radio-choice-h-1e">5</label>
+                <input type="radio" name="radio-choice-h-1" id="radio-choice-h-1a" value="1" checked="checked">
+                <label for="radio-choice-h-1a">1</label>
+                <input type="radio" name="radio-choice-h-1" id="radio-choice-h-1b" value="2">
+                <label for="radio-choice-h-1b">2</label>
+                <input type="radio" name="radio-choice-h-1" id="radio-choice-h-1c" value="3">
+                <label for="radio-choice-h-1c">3</label>
+                <input type="radio" name="radio-choice-h-1" id="radio-choice-h-1d" value="4">
+                <label for="radio-choice-h-1d">4</label>
+                <input type="radio" name="radio-choice-h-1" id="radio-choice-h-1e" value="5">
+                <label for="radio-choice-h-1e">5</label>
             </fieldset>
         </div>
         <div class="ui-field-contain">
-            <fieldset data-role="controlgroup" data-type="horizontal">
-               <!--de arriba class="ui-controlgroup ui-controlgroup-vertical ui-corner-all"-->
-               <!--class="ui-corner-all"-->
+            <fieldset data-role="controlgroup">
+                <!--de arriba class="ui-controlgroup ui-controlgroup-vertical ui-corner-all"-->
+                <!--class="ui-corner-all"-->
                 <legend>Indumentaria:</legend>
-                    <input type="radio" name="radio-choice-h-2" id="radio-choice-h-2a" value="1" checked="checked">
-                    <label for="radio-choice-h-2a">1</label>
-                    <input type="radio" name="radio-choice-h-2" id="radio-choice-h-2b" value="2">
-                    <label for="radio-choice-h-2b">2</label>
-                    <input type="radio" name="radio-choice-h-2" id="radio-choice-h-2c" value="3">
-                    <label for="radio-choice-h-2c">3</label>
-                    <input type="radio" name="radio-choice-h-2" id="radio-choice-h-2d" value="4">
-                    <label for="radio-choice-h-2d">4</label>
-                    <input type="radio" name="radio-choice-h-2" id="radio-choice-h-2e" value="5">
-                    <label for="radio-choice-h-2e">5</label>
+                <input type="radio" name="radio-choice-h-2" id="radio-choice-h-2a" value="1" checked="checked">
+                <label for="radio-choice-h-2a">1</label>
+                <input type="radio" name="radio-choice-h-2" id="radio-choice-h-2b" value="2">
+                <label for="radio-choice-h-2b">2</label>
+                <input type="radio" name="radio-choice-h-2" id="radio-choice-h-2c" value="3">
+                <label for="radio-choice-h-2c">3</label>
+                <input type="radio" name="radio-choice-h-2" id="radio-choice-h-2d" value="4">
+                <label for="radio-choice-h-2d">4</label>
+                <input type="radio" name="radio-choice-h-2" id="radio-choice-h-2e" value="5">
+                <label for="radio-choice-h-2e">5</label>
             </fieldset>
         </div>
         <a data-role="button" href="#notafinal" class="ui-link ui-btn ui-shadow ui-corner-all" role="button">NOTA FINAL</a>
