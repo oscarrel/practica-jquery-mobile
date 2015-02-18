@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="themes/CalificApp.min.css" />
     <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+    <link rel="stylesheet" href="styles/main_n.css" />
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </head>
@@ -18,14 +19,14 @@
     <div id="login" data-role="page" data-url="login" tabindex="0" class="ui-page ui-page-active" style="">
 
         <div data-role="header" role="banner" class="ui-header ui-bar-a">
-            <h1 class="ui-title" role="heading" aria-level="1">CalificApp</h1>
+            <h1 class="ui-title" role="heading" aria-level="1">Bienvenido a CalificApp</h1>
         </div>
 
         <div data-role="header" class="ui-header ui-bar-a" role="banner">
-            <h1 class="ui-title ui-icon-user ui-btn-icon-left ui-mini" role="heading" aria-level="1">LOGIN</h1>
+            <h1 class="ui-title ui-icon-user ui-btn-icon-left ui-mini" role="heading" aria-level="1">ACCESO A USUARIO</h1>
         </div>
         <!-- /header -->
-        
+
         <form class="ui-content" role="main">
             <div class="ui-field-contain">
                 <label for="usuario">Usuario</label>
@@ -36,7 +37,7 @@
             <a data-role="button" href="#seleccion" class="ui-link ui-btn ui-shadow ui-corner-all" role="button">ENTRAR</a>
         </form>
         <!-- /content -->
-        
+
         <div data-theme="a" data-role="footer" role="contentinfo" class="ui-footer ui-bar-a">
             <h4 class="ui-title" role="heading" aria-level="1">CalificApp</h4>
         </div>
@@ -53,7 +54,7 @@
             <!-- /navbar -->
             <div data-role="navbar" data-iconpos="left" class="ui-navbar" role="navigation">
                 <ul class="ui-grid-a">
-                    <li class="ui-block-a"><a href="#login" class="ui-link ui-btn ui-btn-icon-left ui-icon-user ">LOGOUT</a>
+                    <li class="ui-block-a"><a href="#login" class="ui-link ui-btn ui-btn-icon-left ui-icon-user ">SALIR</a>
                     </li>
                     <li class="ui-block-b"><a href="#seleccion" class="ui-btn-active ui-state-persist ui-link ui-btn ui-btn-icon-left ui-icon-bars" title="Seleccionar alumno">SELECCIÓN</a>
                     </li>
@@ -73,7 +74,7 @@
                 </div>
                 <div class="ui-field-contain">
                     <select name="selectalumno" id="selectalumno">
-                       <option value="-1">Selecciona alumno:</option>
+                        <option value="-1">Selecciona alumno:</option>
                         <option value="1">AlumnoA</option>
                         <option value="2">AlumnoB</option>
                         <option value="3">AlumnoC</option>
@@ -81,6 +82,52 @@
                     </select>
                 </div>
             </form>
+        </div>
+        <a data-role="button" href="#calificacion" class="ui-link ui-btn ui-shadow ui-corner-all" role="button">COMENZAR</a>
+        <!-- /content -->
+
+        <div data-theme="a" data-role="footer" role="contentinfo" class="ui-footer ui-bar-a">
+            <h4 class="ui-title" role="heading" aria-level="1">CalificApp</h4>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /page two -->
+
+    <!-- Start of three page: #calificacion -->
+
+    <div data-theme="a" id="calificacion" data-role="page" data-url="calificacion">
+        <div data-role="header" role="banner" class="ui-header ui-bar-a">
+            <h1 class="ui-title" role="heading" aria-level="1">CalificApp</h1>
+        </div>
+        <div data-role="footer">
+            <!-- /navbar -->
+            <div data-role="navbar" data-iconpos="left" class="ui-navbar" role="navigation">
+                <ul class="ui-grid-a">
+                    <li class="ui-block-a"><a href="#login" class="ui-link ui-btn ui-btn-icon-left ui-icon-user ">SALIR</a>
+                    </li>
+                    <li class="ui-block-b"><a href="#seleccion" class="ui-link ui-btn ui-btn-icon-left ui-icon-bars">SELECCIÓN</a>
+                    </li>
+                    <li class="ui-block-b"><a href="#seleccion" class="ui-btn-active ui-state-persist ui-link ui-btn ui-btn-icon-left ui-icon-check">EVALUACIÓN</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="ui-field-contain">
+            <fieldset data-role="controlgroup" data-type="horizontal">
+               <!--de arriba class="ui-controlgroup ui-controlgroup-vertical ui-corner-all"-->
+               <!--class="ui-corner-all"-->
+                <legend>Entrada del alumno:</legend>
+                    <input type="radio" name="radio-choice-h-1" id="radio-choice-h-1a" value="1" checked="checked">
+                    <label for="radio-choice-h-1a">1</label>
+                    <input type="radio" name="radio-choice-h-1" id="radio-choice-h-1b" value="2">
+                    <label for="radio-choice-h-1b">2</label>
+                    <input type="radio" name="radio-choice-h-1" id="radio-choice-h-1c" value="3">
+                    <label for="radio-choice-h-1c">3</label>
+                    <input type="radio" name="radio-choice-h-1" id="radio-choice-h-1d" value="4">
+                    <label for="radio-choice-h-1d">4</label>
+                    <input type="radio" name="radio-choice-h-1" id="radio-choice-h-1e" value="5">
+                    <label for="radio-choice-h-1e">5</label>
+            </fieldset>
         </div>
         <a data-role="button" href="#seleccion" class="ui-link ui-btn ui-shadow ui-corner-all" role="button">COMENZAR</a>
         <!-- /content -->
@@ -90,25 +137,16 @@
         </div>
         <!-- /footer -->
     </div>
-    <!-- /page two -->
-  
-   <!-- Start of third page: #calificacion -->
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
+    <!-- /page three -->
+
+
+
+
+
+
+
+
+
 
     <!-- Start of third page: #popup -->
     <div id="popup" data-role="page" data-url="popup">
