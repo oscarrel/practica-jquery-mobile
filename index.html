@@ -24,7 +24,7 @@
         <!-- /header -->
         <div data-role="navbar" data-iconpos="left" class="ui-navbar" role="navigation">
             <ul class="ui-grid-a">
-                <li class="ui-block-b"><a href="#seleccion" class="ui-btn-active ui-state-persist ui-link ui-btn ui-btn-icon-top ui-icon-user" title="Introduce datos para loguearte">LOGIN</a>
+                <li class="ui-block-b"><a href="#login" class="ui-btn-active ui-state-persist ui-link ui-btn ui-btn-icon-top ui-icon-user" title="Introduce datos para loguearte">LOGIN</a>
                 </li>
             </ul>
         </div>
@@ -37,7 +37,7 @@
                 <label for="pass">Password</label>
                 <input type="password" data-clear-btn="true" autocomplete="off" name="pass" id="pass" placeholder="Introduce password" value="" title="Introduce password">
             </div>
-            <a data-role="button" href="#seleccion" class="ui-link ui-btn ui-shadow ui-corner-all" role="button">ENTRAR</a>
+            <a data-role="button" href="#seleccion" data-transition="slide" class="ui-link ui-btn ui-shadow ui-corner-all" role="button">ENTRAR</a>
         </form>
         <!-- /content -->
 
@@ -50,8 +50,9 @@
 
     <!-- Comienzo pagina 2: #seleccion -->
     <div data-theme="a" id="seleccion" data-role="page" data-url="seleccion">
-        <div data-role="header" role="banner" class="ui-header ui-bar-a">
-            <h1 class="ui-title" role="heading" aria-level="1">CalificApp</h1>
+        <div data-theme="a" data-role="header" role="contentinfo" class="ui-header ui-bar-a">
+            <h4 class="ui-title" role="heading" aria-level="1">CalificApp</h4>
+            <a href="#login" data-transition="slide" data-direction="reverse" data-icon="power" class="ui-btn-right">SALIR</a>
         </div>
         <!-- /header -->
         <div data-role="navbar" data-iconpos="left" class="ui-navbar" role="navigation">
@@ -84,49 +85,44 @@
                 </div>
             </form>
         </div>
-        <a data-role="button" href="#calificacion" class="ui-link ui-btn ui-shadow ui-corner-all" role="button">COMENZAR</a>
+        <a data-role="button" href="#calificacion" data-transition="slide" class="ui-link ui-btn ui-shadow ui-corner-all" role="button">COMENZAR</a>
         <!-- /content -->
 
         <div data-theme="a" data-role="footer" role="contentinfo" class="ui-footer ui-bar-a">
             <h4 class="ui-title" role="heading" aria-level="1">CalificApp</h4>
-            <a href="#login" class="ui-btn ui-corner-all ui-btn-inline ui-mini footer-button-right ui-btn-icon-left ui-icon-power">SALIR</a>
+            <a href="#login" data-transition="slide" data-direction="reverse" class="ui-btn ui-corner-all ui-btn-inline ui-mini footer-button-right ui-btn-icon-left ui-icon-power">SALIR</a> 
         </div>
         <!-- /footer -->
     </div>
-    <!-- /page two -->
+    <!-- /pagina 2 -->
 
-    <!-- Start of three page: #calificacion -->
-
+    <!-- Comienzo pagina 3: #calificacion -->
     <div data-theme="a" id="calificacion" data-role="page" data-url="calificacion">
-        <div data-role="header" role="banner" class="ui-header ui-bar-a" data-add-back-btn="true" data-back-btn-text="SELECCIÓN">
+        <div data-role="header" role="banner" class="ui-header ui-bar-a">
             <h1 class="ui-title" role="heading" aria-level="1">CalificApp</h1>
+            <a href="#login" data-transition="slide" data-direction="reverse" data-icon="power" class="ui-btn-right">SALIR</a>
+            <a href="#seleccion" data-transition="slide" data-direction="reverse" data-icon="carat-l" class="ui-btn-left">SELECCIÓN</a>
         </div>
         <div data-role="footer">
             <!-- /navbar -->
             <div data-role="navbar" data-iconpos="left" class="ui-navbar" role="navigation">
                 <ul class="ui-grid-a">
-                    <li class="ui-block-a"><a href="#login" class="ui-link ui-btn ui-btn-icon-left ui-icon-user ">SALIR</a>
-                    </li>
-                    <li class="ui-block-b"><a href="#seleccion" class="ui-btn-active ui-state-persist ui-link ui-btn ui-btn-icon-left ui-icon-check">EVALUACIÓN</a>
+                    <li class="ui-block-b"><a href="#calificacion" class="ui-btn-active ui-state-persist ui-link ui-btn ui-btn-icon-top ui-icon-check" title="Califica la presentacion oral">EXPRESIÓN ORAL</a>
                     </li>
                 </ul>
             </div>
         </div>
         <div class="ui-field-contain">
-            <fieldset data-role="controlgroup" data-type="horizontal">
+            <fieldset data-role="controlgroup">
                 <!--de arriba class="ui-controlgroup ui-controlgroup-vertical ui-corner-all"-->
                 <!--class="ui-corner-all"-->
                 <legend>Entrada del alumno:</legend>
-                <input type="radio" name="radio-choice-h-1" id="radio-choice-h-1a" value="1" checked="checked">
-                <label for="radio-choice-h-1a">1</label>
-                <input type="radio" name="radio-choice-h-1" id="radio-choice-h-1b" value="2">
-                <label for="radio-choice-h-1b">2</label>
-                <input type="radio" name="radio-choice-h-1" id="radio-choice-h-1c" value="3">
-                <label for="radio-choice-h-1c">3</label>
-                <input type="radio" name="radio-choice-h-1" id="radio-choice-h-1d" value="4">
-                <label for="radio-choice-h-1d">4</label>
-                <input type="radio" name="radio-choice-h-1" id="radio-choice-h-1e" value="5">
-                <label for="radio-choice-h-1e">5</label>
+                <input type="radio" name="rc1" id="rc1a" value="1" checked="checked">
+                <label for="rc1a">Excelente</label>
+                <input type="radio" name="rc1" id="rc1b" value="2">
+                <label for="rc1b">Adecuada</label>
+                <input type="radio" name="rc1" id="rc1c" value="3">
+                <label for="rc1c">Mala</label>
             </fieldset>
         </div>
         <div class="ui-field-contain">
@@ -146,11 +142,12 @@
                 <label for="radio-choice-h-2e">5</label>
             </fieldset>
         </div>
-        <a data-role="button" href="#notafinal" class="ui-link ui-btn ui-shadow ui-corner-all" role="button">NOTA FINAL</a>
+        <a data-role="button" href="#notafinal" data-transition="slide" class="ui-link ui-btn ui-shadow ui-corner-all" role="button">NOTA FINAL</a>
         <!-- /content -->
 
         <div data-theme="a" data-role="footer" role="contentinfo" class="ui-footer ui-bar-a">
             <h4 class="ui-title" role="heading" aria-level="1">CalificApp</h4>
+            <a href="#login" data-transition="slide" data-direction="reverse" class="ui-btn ui-corner-all ui-btn-inline ui-mini footer-button-right ui-btn-icon-left ui-icon-power">SALIR</a> 
         </div>
         <!-- /footer -->
     </div>
