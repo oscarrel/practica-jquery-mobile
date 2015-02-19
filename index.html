@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="styles/main_n.css" />
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <!--<script src="scripts/main.js"></script>-->
 </head>
 
 <body class="ui-mobile-viewport ui-overlay-a">
@@ -55,6 +56,7 @@
             <a href="#login" data-transition="slide" data-direction="reverse" data-icon="power" class="ui-btn-right">SALIR</a>
         </div>
         <!-- /header -->
+
         <div data-role="navbar" data-iconpos="left" class="ui-navbar" role="navigation">
             <ul class="ui-grid-a">
                 <li class="ui-block-b"><a href="#seleccion" class="ui-btn-active ui-state-persist ui-link ui-btn ui-btn-icon-top ui-icon-bars" title="Seleccionar módulo y alumno">SELECCIÓN</a>
@@ -85,45 +87,58 @@
                 </div>
             </form>
         </div>
-        <a data-role="button" href="#calificacion" data-transition="slide" class="ui-link ui-btn ui-shadow ui-corner-all" role="button">COMENZAR</a>
+        <a data-role="button" href="#calificacion" data-transition="slide" class="ui-link ui-btn ui-shadow ui-corner-all" role="button" title="Comenzar la calificacion">COMENZAR</a>
         <!-- /content -->
 
         <div data-theme="a" data-role="footer" role="contentinfo" class="ui-footer ui-bar-a">
             <h4 class="ui-title" role="heading" aria-level="1">CalificApp</h4>
-            <a href="#login" data-transition="slide" data-direction="reverse" class="ui-btn ui-corner-all ui-btn-inline ui-mini footer-button-right ui-btn-icon-left ui-icon-power">SALIR</a> 
+            <a href="#login" data-transition="slide" data-direction="reverse" class="ui-btn ui-corner-all ui-btn-inline ui-mini footer-button-right ui-btn-icon-left ui-icon-power" title="Volver al login">SALIR</a>
         </div>
         <!-- /footer -->
+
     </div>
     <!-- /pagina 2 -->
 
     <!-- Comienzo pagina 3: #calificacion -->
     <div data-theme="a" id="calificacion" data-role="page" data-url="calificacion">
-        <div data-role="header" role="banner" class="ui-header ui-bar-a">
-            <h1 class="ui-title" role="heading" aria-level="1">CalificApp</h1>
-            <a href="#login" data-transition="slide" data-direction="reverse" data-icon="power" class="ui-btn-right">SALIR</a>
-            <a href="#seleccion" data-transition="slide" data-direction="reverse" data-icon="carat-l" class="ui-btn-left">SELECCIÓN</a>
+
+        <div data-role="panel" data-position="right"  data-display="overlay" data-theme="a" id="ayuda_entrada">
+            <p>Valora la entrada del alumno, si saluda, si se dirige correctamente al público</p>
+            <a href="#val1" data-rel="close" data-role="button" data-icon="delete" data-iconpos="notext"></a>
         </div>
-        <div data-role="footer">
-            <!-- /navbar -->
-            <div data-role="navbar" data-iconpos="left" class="ui-navbar" role="navigation">
+        <!--/panel -->
+
+        <div data-role="header" role="banner" class="ui-header ui-bar-a" data-position="fixed">
+            <h1 class="ui-title" role="heading" aria-level="1">CalificApp</h1>
+            <a id="btn_sal" href="#login" data-transition="slide" data-direction="reverse" data-icon="power" class="ui-btn-right" title="Volver al login"></a>
+            <a id="btn_alum" href="#seleccion" data-transition="slide" data-direction="reverse" data-icon="carat-l" class="ui-btn-left" title="Volver a seleccionar alumno"></a>
+            <a id="btn_sal1" href="#login" data-transition="slide" data-direction="reverse" data-icon="power" class="ui-btn-right" title="Volver al login">SALIR</a>
+            <a id="btn_alum1" href="#seleccion" data-transition="slide" data-direction="reverse" data-icon="carat-l" class="ui-btn-left" title="Volver a seleccionar alumno">ALUMNO</a>
+        </div>
+        <!-- /header -->
+
+           <div data-role="navbar" data-iconpos="left" class="ui-navbar" role="navigation">
                 <ul class="ui-grid-a">
-                    <li class="ui-block-b"><a href="#calificacion" class="ui-btn-active ui-state-persist ui-link ui-btn ui-btn-icon-top ui-icon-check" title="Califica la presentacion oral">EXPRESIÓN ORAL</a>
+                    <li class="ui-block-b">
+                        <a href="#calificacion" class="ui-btn-active ui-state-persist ui-link ui-btn ui-btn-icon-top ui-icon-check" title="Califica la presentacion oral">EXPRESIÓN ORAL</a>
+                        <a id="info_panel" href="#ayuda_entrada" data-role="button" class="ui-btn-left" data-icon="info" data-iconpos="notext" data-rel="close" title="¿Qué valorar en entrada?"></a>
                     </li>
                 </ul>
             </div>
-        </div>
+
+            <!-- /navbar -->
+
         <div class="ui-field-contain">
-            <fieldset data-role="controlgroup">
+            <fieldset data-role="controlgroup" data-type="horizontal">
                 <!--de arriba class="ui-controlgroup ui-controlgroup-vertical ui-corner-all"-->
                 <!--class="ui-corner-all"-->
                 <legend>Entrada del alumno:</legend>
                 <input type="radio" name="rc1" id="rc1a" value="1" checked="checked">
-                <label for="rc1a">Excelente</label>
-                <input type="radio" name="rc1" id="rc1b" value="2">
-                <label for="rc1b">Adecuada</label>
-                <input type="radio" name="rc1" id="rc1c" value="3">
-                <label for="rc1c">Mala</label>
+                <label for="rc1a">Buena</label>
+                <input type="radio" name="rc1" id="rc1b" value="3">
+                <label for="rc1b">Mala</label>
             </fieldset>
+
         </div>
         <div class="ui-field-contain">
             <fieldset data-role="controlgroup">
@@ -147,7 +162,7 @@
 
         <div data-theme="a" data-role="footer" role="contentinfo" class="ui-footer ui-bar-a">
             <h4 class="ui-title" role="heading" aria-level="1">CalificApp</h4>
-            <a href="#login" data-transition="slide" data-direction="reverse" class="ui-btn ui-corner-all ui-btn-inline ui-mini footer-button-right ui-btn-icon-left ui-icon-power">SALIR</a> 
+            <a href="#login" data-transition="slide" data-direction="reverse" class="ui-btn ui-corner-all ui-btn-inline ui-mini footer-button-right ui-btn-icon-left ui-icon-power">SALIR</a>
         </div>
         <!-- /footer -->
     </div>
