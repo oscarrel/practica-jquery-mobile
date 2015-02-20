@@ -1,23 +1,25 @@
 .ui-page {
     -webkit-backface-visibility: hidden;
 }
+
 .ui-header,
 .ui-bar-a {
     border-top-width: 1px;
 }
+
 .ui-mobile label,
 div.ui-controlgroup-label {
     font-weight: bold;
 }
+
 .ui-input-text,
 .ui-input-search {
     border-width: 0;
 }
+
 div.ui-controlgroup-label {
     margin: 0 0 0 15px !important;
 }
-
-
 /*BOTON DEL PIE*/
 
 .footer-button-left,
@@ -27,13 +29,14 @@ div.ui-controlgroup-label {
     top: auto;
     bottom: 0.24em;
 }
+
 .footer-button-left {
     left: 0.4em;
 }
+
 .footer-button-right {
     right: 0.4em;
 }
-
 /*BOTON DE LA CABECERA*/
 
 .header-button-left,
@@ -43,12 +46,15 @@ div.ui-controlgroup-label {
     top: auto;
     bottom: 0.24em;
 }
+
 .header-button-left {
     left: 0.4em;
 }
+
 .header-button-right {
     right: 0.4em;
 }
+
 .ui-input-text.ui-body-inherit.ui-corner-all.ui-shadow-inset.ui-input-has-clear {
     margin-bottom: 10px;
 }
@@ -68,8 +74,6 @@ html body .ui-group-theme-a .ui-bar-inherit {
     text-shadow: none;
     font-weight: bold;
 }
-
-
 /*BOTONES*/
 
 #btn_sal,
@@ -77,21 +81,20 @@ html body .ui-group-theme-a .ui-bar-inherit {
 #btn_mod,
 #btn_not,
 #btn_alumf,
-#btn_notf{
+#btn_notf {
     display: none;
 }
+
 #btn_alum1,
-#btn_not1{
+#btn_not1 {
     margin-bottom: .8em;
     margin-right: .1em;
 }
 
 #btn_alum1f,
-#btn_not1f{
+#btn_not1f {
     margin-right: .1em;
 }
-
-
 
 @media screen and (max-width: 420px) {
     #btn_sal1,
@@ -99,7 +102,7 @@ html body .ui-group-theme-a .ui-bar-inherit {
     #btn_alum1,
     #btn_not1,
     #btn_alum1f,
-    #btn_not1f{
+    #btn_not1f {
         display: none;
     }
     #btn_sal,
@@ -107,25 +110,22 @@ html body .ui-group-theme-a .ui-bar-inherit {
     #btn_alum,
     #btn_not,
     #btn_alumf,
-    #btn_notf{
+    #btn_notf {
         display: inline;
         padding: 1.3em;
     }
     #btn_alum,
-    #btn_not{
+    #btn_not {
         margin-bottom: .8em;
         margin-right: .1em;
     }
     .mod {
         font-size: .9em !important;
     }
-    /*
-    fieldset label{
-        font-size: .9em !important;
-    }*/
+    #piecrit a {
+        font-size: .6em !important;
+    }
 }
-
-
 /*BLOQUES DE CALIFICACION*/
 
 fieldset {
@@ -140,11 +140,11 @@ fieldset legend[class="val"] {
     text-shadow: none;
 }
 
-fieldset legend{
+fieldset legend {
     padding: 1em;
 }
 
-label input{
+label input {
     margin-left: 2em;
 }
 
@@ -154,23 +154,29 @@ label input{
 }
 
 @media screen and (max-width: 49em) {
-    
-    .ui-field-contain > label, .ui-field-contain .ui-controlgroup-label, .ui-field-contain > .ui-rangeslider > label {
+    .ui-field-contain > label,
+    .ui-field-contain .ui-controlgroup-label,
+    .ui-field-contain > .ui-rangeslider > label {
         float: none;
         margin: 0;
         width: auto;
     }
-    .ui-field-contain .ui-controlgroup, .ui-field-contain fieldset.ui-controlgroup {
+    .ui-field-contain .ui-controlgroup,
+    .ui-field-contain fieldset.ui-controlgroup {
         margin: 0;
     }
-    .ui-field-contain > label ~ [class*="ui-"], .ui-field-contain .ui-controlgroup-controls {
+    .ui-field-contain > label ~ [class*="ui-"],
+    .ui-field-contain .ui-controlgroup-controls {
         float: none;
         width: auto;
     }
 }
 
 @media screen and (min-width: 49em) {
-    .ui-grid-c > .ui-block-a, .ui-grid-c > .ui-block-b, .ui-grid-c > .ui-block-c, .ui-grid-c > .ui-block-d {
+    .ui-grid-c > .ui-block-a,
+    .ui-grid-c > .ui-block-b,
+    .ui-grid-c > .ui-block-c,
+    .ui-grid-c > .ui-block-d {
         width: 25%;
     }
     .ui-controlgroup-vertical .ui-btn.ui-first-child {
@@ -179,28 +185,57 @@ label input{
     .ui-controlgroup-vertical .ui-btn.ui-last-child {
         border-bottom-left-radius: 0;
     }
-    .ui-field-contain > label ~ [class*="ui-"], .ui-field-contain .ui-controlgroup-controls {
+    .ui-field-contain > label ~ [class*="ui-"],
+    .ui-field-contain .ui-controlgroup-controls {
         float: left;
         width: 78%;
     }
 }
 
-
-/* POPUPS DE AYUDA */
-#ayuda_val1{
-    max-width:350px;
+.checking {
+    width: 40%;
+    float: left;
+    margin: 1em 3em 2em .2em;
 }
 
+.ayuda {
+    margin-left: 2em;
+}
 
+.ui-checkbox input.custom {
+    margin: .7em 0 0 .1em;
+}
 
+.ui-btn.checking {
+    padding: .8em 3em;
+}
+
+#exp {
+    margin-top: 1em;
+}
+
+.ui-checkbox input.grupo {
+    margin: -.7em 0 0 .1em;
+}
+/* POPUPS DE AYUDA */
+
+#ayuda_val1 {
+    max-width: 350px;
+}
 /*FONDOS*/
 
 #login {
     background-color: white;
 }
-#seleccion {
+
+#seleccion1 {
     background-color: #c4def8;
 }
+
+#seleccion2 {
+    background-color: #c4f8e4;
+}
+
 #calificacion {
-    background-color: white;
+    background-color: #d2dee8;
 }

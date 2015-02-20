@@ -218,9 +218,9 @@
         <!--Empieza content -->
         <div class="ui-field-contain">
             <fieldset data-role="controlgroup">
-                <!--Entrada-->
+                <!--data-type="horizontal"-->
                 <legend class="val"><b>Entrada del alumno</b>
-                    <a href="#ayuda_val1" data-rel="popup" data-transition="pop" class="ayuda my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext ui-corner-all" title="Qué valorar en la entrada"></a>
+                    <a href="#ayuda_val1" data-rel="popup" data-transition="pop" class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext ui-corner-all" title="Qué valorar en la entrada"></a>
                     <div data-role="popup" id="ayuda_val1" class="ui-content" data-theme="a">
                         <p>En la entrada del alumno se valorarán cosas relativas a la educación y el protocolo. Si saluda, si se dirige correctamente e los asistentes, etc...</p>
                     </div>
@@ -232,10 +232,10 @@
                 <input type="radio" name="rc1" id="rc1c" value="3">
                 <label for="rc1c">Mala</label>
             </fieldset>
-            <!--Indumentaria-->
+
             <fieldset data-role="controlgroup">
                 <legend class="val"><b>Indumentaria</b>
-                    <a href="#ayuda_val2" data-rel="popup" data-transition="pop" class="ayuda my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext ui-corner-all" title="Qué valorar en la indumentaria"></a>
+                    <a href="#ayuda_val2" data-rel="popup" data-transition="pop" class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext ui-corner-all" title="Qué valorar en la indumentaria"></a>
                     <div data-role="popup" id="ayuda_val2" class="ui-content" data-theme="a">
                         <p>En la indumentaria del alumno se valorará la higiene, limpieza y pulcritud en la vestimenta. No el estilo</p>
                     </div>
@@ -247,153 +247,98 @@
                 <input type="radio" name="rc2" id="rc2c" value="3">
                 <label for="rc2c">Mala</label>
             </fieldset>
-            <!--Introducción-->
-            <label class="checking">
-                <input type="checkbox" name="rc3" id="rc3" class="custom">Introducción
-            </label>
-            <a href="#ayuda_val3" data-rel="popup" data-transition="pop" class="ayuda my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext ui-corner-all" title="Qué valorar en la introducción"></a>
-            <div data-role="popup" id="ayuda_val3" class="ui-content" data-theme="a">
-                <p>Se valoran cuestiones como: ¿Es atractiva? ¿Queda claro el proyecto?. Si la respuesta es positiva marcar el campo</p>
-            </div>
 
-            <!--Desarrollo-->
-            <label class="checking">
-                <input type="checkbox" name="rc4" id="rc4" class="custom">Desarrollo
-            </label>
-            <a href="#ayuda_val4" data-rel="popup" data-transition="pop" class="ayuda my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext ui-corner-all" title="Qué valorar en el desarrollo"></a>
-            <div data-role="popup" id="ayuda_val4" class="ui-content" data-theme="a">
-                <p>Se valora de forma afirmativa si hay:</br>
-                    - Orden en las ideas</br>
-                    - Claridad en la exposición</br>
-                    - Aclaración de términos técnicos</br>
-                    Si la respuesta es positiva marcar el campo</p>
-            </div>
+            <fieldset data-role="controlgroup">
+                <legend class="val"><b>Introducción</b>
+                    <a href="#ayuda_val3" data-rel="popup" data-transition="pop" class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext ui-corner-all" title="Qué valorar en la introducción"></a>
+                    <div data-role="popup" id="ayuda_val3" class="ui-content" data-theme="a">
+                        <p>Se valora de forma afirmativa si hay respuesta positiva en cuestiones como: ¿Es atractiva? ¿Queda claro el proyecto?</p>
+                    </div>
+                </legend>
+                <label>Positivo</label>
+                <input type="checkbox" name="rc3" id="rc3" class="custom" />
+                <label for="rc3">Positivo</label>
+            </fieldset>
 
-            <!--Conclusion-->
-            <label class="checking">
-                <input type="checkbox" name="rc5" id="rc5" class="custom">Conclusión
-            </label>
-            <a href="#ayuda_val5" data-rel="popup" data-transition="pop" class="ayuda my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext ui-corner-all" title="Qué valorar en la conclusión"></a>
-            <div data-role="popup" id="ayuda_val5" class="ui-content" data-theme="a">
-                <p>Se valora de forma afirmativa si:</br>
-                    - Queda claro el objetivo del proyecto</br>
-                    - Lo vende bien</br>
-                    Si la respuesta es positiva marcar el campo</p>
-            </div>
+            <fieldset data-role="controlgroup">
+                <legend class="val"><b>Desarrollo:</b>
+                    <a href="#ayuda_val4" data-rel="popup" data-transition="pop" class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext ui-corner-all" title="Qué valorar en el desarrollo"></a>
+                    <div data-role="popup" id="ayuda_val4" class="ui-content" data-theme="a">
+                        <p>Se valora de forma afirmativa si hay:</br>
+                            - Orden en las ideas</br>
+                            - Claridad en la exposición</br>
+                            - Aclaración de términos técnicos</p>
+                    </div>
+                </legend>
+                <label>Positivo</label>
+                <input type="checkbox" name="rc4" id="rc4" class="custom" />
+                <label for="rc4">Positivo</label>
+            </fieldset>
 
-            <!--Seguridad-->
-            <label class="checking">
-                <input type="checkbox" name="rc6" id="rc6" class="custom">Seguridad
-            </label>
-            <a href="#ayuda_val6" data-rel="popup" data-transition="pop" class="ayuda my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext ui-corner-all" title="Qué valorar en la seguridad"></a>
-            <div data-role="popup" id="ayuda_val6" class="ui-content" data-theme="a">
-                <p>Se valora si hay seguridad en lo que expone y si la presentación está trabajada (uso correcto de power-point u otros con discurso bien preparado). Si la respuesta es positiva marcar el campo</p>
-            </div>
+            <fieldset data-role="controlgroup">
+                <legend class="val"><b>Conclusión:</b>
+                    <a href="#ayuda_val5" data-rel="popup" data-transition="pop" class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext ui-corner-all" title="Qué valorar en la conclusión"></a>
+                    <div data-role="popup" id="ayuda_val5" class="ui-content" data-theme="a">
+                        <p>Se valora de forma afirmativa si:</br>
+                            - Queda claro el objetivo del proyecto</br>
+                            - Lo vende bien</p>
+                    </div>
+                </legend>
+                <label>Positivo</label>
+                <input type="checkbox" name="rc5" id="rc5" class="custom" />
+                <label for="rc5">Positivo</label>
+            </fieldset>
 
-            <!--Entusiasmo-->
-            <label class="checking">
-                <input type="checkbox" name="rc7" id="rc7" class="custom">Entusiasmo
-            </label>
-            <a href="#ayuda_val7" data-rel="popup" data-transition="pop" class="ayuda my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext ui-corner-all" title="Qué valorar en el entusiasmo"></a>
-            <div data-role="popup" id="ayuda_val7" class="ui-content" data-theme="a">
-                <p>Se valora si el alumno demuestra entusiasmo en lo que expone. Si la respuesta es positiva marcar el campo</p>
-            </div>
+            <fieldset data-role="controlgroup">
+                <legend class="val"><b>Seguridad:</b>
+                    <a href="#ayuda_val6" data-rel="popup" data-transition="pop" class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext ui-corner-all" title="Qué valorar en la seguridad"></a>
+                    <div data-role="popup" id="ayuda_val6" class="ui-content" data-theme="a">
+                        <p>Se valora si hay seguridad en lo que expone y si la presentación está trabajada (uso correcto de power-point u otros con discurso bien preparado)</p>
+                    </div>
+                </legend>
+                <label>Positivo</label>
+                <input type="checkbox" name="rc6" id="rc6" class="custom" />
+                <label for="rc6">Positivo</label>
+            </fieldset>
 
-            <!--Expresion Oral-->
-            <fieldset id="exp" data-role="controlgroup">
+            <fieldset data-role="controlgroup">
+                <legend class="val"><b>Entusiasmo:</b>
+                    <a href="#ayuda_val7" data-rel="popup" data-transition="pop" class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext ui-corner-all" title="Qué valorar en el entusiasmo"></a>
+                    <div data-role="popup" id="ayuda_val7" class="ui-content" data-theme="a">
+                        <p>Se valora si el alumno demuestra entusiasmo en lo que expone</p>
+                    </div>
+                </legend>
+                <label>Positivo</label>
+                <input type="checkbox" name="rc7" id="rc7" class="custom" />
+                <label for="rc7">Positivo</label>
+            </fieldset>
+
+            <fieldset data-role="controlgroup">
                 <legend class="val"><b>Expresión Oral</b>
-                    <a href="#ayuda_val8" data-rel="popup" data-transition="pop" class="ayuda my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext ui-corner-all" title="Qué valorar en la expresión oral"></a>
+                    <a href="#ayuda_val8" data-rel="popup" data-transition="pop" class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext ui-corner-all" title="Qué valorar en la expresión oral"></a>
                     <div data-role="popup" id="ayuda_val8" class="ui-content" data-theme="a">
-                        <p>En la expresión oral del alumno se valorarán los siguientes aspectos:</br>
-                            - Entonación: Marcar si es correcta.</br>
-                            - Volumen: Marcar si es el adecuado.</br>
-                            - Velocidad: Marcar si usa una velocidad correcta.</br>
-                            - No Vacilación en la voz: Marcar si demuestra seguridad.</br>
-                            - Pausas: Marcar si hace las pausas adecuadas. </br>
-                            - Muletillas: Marcar si NO hace uso de muletillas. </br>
-                        </p>
+                        <p>En la indumentaria del alumno se valorará la higiene, limpieza y pulcritud en la vestimenta. No el estilo</p>
                     </div>
                 </legend>
                 <label>Entonación</label>
-                <input type="checkbox" name="rc8" id="rc8" class="custom grupo" />
+                <input type="checkbox" name="rc8" id="rc8" class="custom" />
                 <label for="rc8">Entonación</label>
-                <label>Volumen</label>
-                <input type="checkbox" name="rc9" id="rc9" class="custom grupo" />
-                <label for="rc9">Volumen</label>
-                <label>Velocidad</label>
-                <input type="checkbox" name="rc10" id="rc10" class="custom grupo" />
-                <label for="rc10">Velocidad</label>
-                <label>Vacilante</label>
-                <input type="checkbox" name="rc11" id="rc11" class="custom grupo" />
-                <label for="rc11">No vacilante</label>
-                <label>Pausas</label>
-                <input type="checkbox" name="rc12" id="rc12" class="custom grupo" />
-                <label for="rc12">Pausas Correctas</label>
-                <label>Muletillas</label>
-                <input type="checkbox" name="rc13" id="rc13" class="custom grupo" />
-                <label for="rc13">No usa Muletillas</label>
             </fieldset>
 
-            <!--Duracion-->
-            <label class="checking">
-                <input type="checkbox" name="rc14" id="rc14" class="custom">Duración
-            </label>
-            <a href="#ayuda_val9" data-rel="popup" data-transition="pop" class="ayuda my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext ui-corner-all" title="Qué valorar en la duración"></a>
-            <div data-role="popup" id="ayuda_val9" class="ui-content" data-theme="a">
-                <p>Se valora que el alumno se ajuste al tiempo estipulado. Si la respuesta es positiva marcar el campo</p>
-            </div>
-
-            <!--Lenguaje no verbal-->
-
-            <fieldset id="exp" data-role="controlgroup">
-                <legend class="val"><b>Lenguaje NO verbal</b>
-                    <a href="#ayuda_val10" data-rel="popup" data-transition="pop" class="ayuda my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext ui-corner-all" title="Qué valorar en el lenguaje no verbal"></a>
-                    <div data-role="popup" id="ayuda_val10" class="ui-content" data-theme="a">
-                        <p>En el lenguaje no verbal se valorarán los siguientes aspectos:</br>
-                            - Mirada: Marcar si dirige la mirada a todo el auditorio.</br>
-                            - Expresion facial: Marcar si sonrie o mantiene una expresión facial positiva.</br>
-                            - Posición: Marcar si usa una posición adecuada del cuerpo.</br>
-                            - Sin Tics: Marcar si NO tiene tics o gestos nerviosos.</br>
-                        </p>
+                <label>
+                    <input name="checkbox-0 " type="checkbox">Check me
+                    <a href="#ayuda_val8" data-rel="popup" data-transition="pop" class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext ui-corner-all" title="Qué valorar en la expresión oral"></a>
+                    <div data-role="popup" id="ayuda_val8" class="ui-content" data-theme="a">
+                        <p>En la indumentaria del alumno se valorará la higiene, limpieza y pulcritud en la vestimenta. No el estilo</p>
                     </div>
-                </legend>
-                <label>Mirada</label>
-                <input type="checkbox" name="rc15" id="rc15" class="custom grupo" />
-                <label for="rc15">Mirada</label>
-                <label>Expresión Facial</label>
-                <input type="checkbox" name="rc16" id="rc16" class="custom grupo" />
-                <label for="rc16">Expresión Facial</label>
-                <label>Posición</label>
-                <input type="checkbox" name="rc17" id="rc17" class="custom grupo" />
-                <label for="rc17">Posición</label>
-                <label>Sin Tics</label>
-                <input type="checkbox" name="rc18" id="rc18" class="custom grupo" />
-                <label for="rc18">Sin Tics</label>
-            </fieldset>
+                </label>
 
-            <!--Atencion del publico-->
-            <label class="checking">
-                <input type="checkbox" name="rc19" id="rc19" class="custom">Atrae Atención
-            </label>
-            <a href="#ayuda_val11" data-rel="popup" data-transition="pop" class="ayuda my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext ui-corner-all" title="Qué valorar en la atención al público"></a>
-            <div data-role="popup" id="ayuda_val11" class="ui-content" data-theme="a">
-                <p>Se valora que el alumno logre atraer la atención del público. Si la respuesta es positiva marcar el campo</p>
-            </div>
 
-            <!--Preguntas realizadas-->
-            <label class="checking">
-                <input type="checkbox" name="rc20" id="rc20" class="custom">Respuestas
-            </label>
-            <a href="#ayuda_val11" data-rel="popup" data-transition="pop" class="ayuda my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext ui-corner-all" title="Qué valorar en la respuesta a las preguntas"></a>
-            <div data-role="popup" id="ayuda_val11" class="ui-content" data-theme="a">
-                <p>Se valora que el alumno responda de forma coherente a las preguntas del público. Si la respuesta es positiva marcar el campo</p>
-            </div>
 
         </div>
         <!-- /content -->
 
         <!--Empieza footer -->
-        <!--
         <div data-theme="a" data-role="footer" role="contentinfo" class="ui-footer ui-bar-a">
             <h4 class="ui-title" role="heading" aria-level="1">CalificApp</h4>
             <a id="btn_alum1f" href="#seleccion2" data-transition="slide" data-direction="reverse" class="ui-btn ui-corner-all ui-btn-inline ui-mini footer-button-left ui-btn-icon-left ui-icon-user" title="Volver a seleccionar alumno">ALUMNO</a>
@@ -401,24 +346,6 @@
             <a id="btn_alumf" href="#seleccion2" data-transition="slide" data-direction="reverse" class="ui-btn ui-corner-all ui-btn-inline ui-mini footer-button-left ui-btn-icon-left ui-icon-user" title="Volver a seleccionar alumno"></a>
             <a id="btn_notf" href="#notas" data-transition="slide" class="ui-btn ui-corner-all ui-btn-inline ui-mini footer-button-right ui-btn-icon-left ui-icon-star" title="Asignar notas"></a>
         </div>
-        -->
-
-        <div id="piecrit" data-role="footer">
-            <div data-role="navbar" data-iconpos="right">
-                <ul>
-                    <li><a href="#" data-icon="user">ALUMNO</a>
-                    </li>
-                    <li><a href="#" data-icon="bars">MÓDULO</a>
-                    </li>
-                    <li><a href="#" data-icon="star">NOTAS</a>
-                    </li>
-                    <li><a href="#" data-icon="power">SALIR</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /navbar -->
-        </div>
-        <!-- /footer -->
         <!-- /footer -->
     </div>
     <!-- /pagina 4 -->
