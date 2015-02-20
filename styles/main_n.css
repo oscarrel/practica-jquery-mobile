@@ -1,34 +1,23 @@
 .ui-page {
     -webkit-backface-visibility: hidden;
 }
-
 .ui-header,
 .ui-bar-a {
     border-top-width: 1px;
 }
-
 .ui-mobile label,
 div.ui-controlgroup-label {
     font-weight: bold;
 }
-
 .ui-input-text,
 .ui-input-search {
     border-width: 0;
 }
-
 div.ui-controlgroup-label {
     margin: 0 0 0 15px !important;
 }
-/*
-fieldset legend {
-    padding: 15px;
-    background-color: #007dd0;
-    text-align: center;
-    font-weight: normal;
-    color: white;
-}
-*/
+
+
 /*BOTON DEL PIE*/
 
 .footer-button-left,
@@ -38,14 +27,13 @@ fieldset legend {
     top: auto;
     bottom: 0.24em;
 }
-
 .footer-button-left {
     left: 0.4em;
 }
-
 .footer-button-right {
     right: 0.4em;
 }
+
 /*BOTON DE LA CABECERA*/
 
 .header-button-left,
@@ -55,30 +43,18 @@ fieldset legend {
     top: auto;
     bottom: 0.24em;
 }
-
 .header-button-left {
     left: 0.4em;
 }
-
 .header-button-right {
     right: 0.4em;
 }
-
 .ui-input-text.ui-body-inherit.ui-corner-all.ui-shadow-inset.ui-input-has-clear {
     margin-bottom: 10px;
 }
 
-.primer {
-    text-align: left;
-}
-
 #selecciona {
     padding: .1em 1em .1em 1em;
-}
-
-#selec_mod,
-#selec_alum {
-    margin: 0;
 }
 
 .ui-bar-a,
@@ -89,56 +65,142 @@ html body .ui-group-theme-a .ui-bar-inherit {
     background-color: white;
     border-color: #004472;
     color: black;
-    text-shadow: 0 0 0 #c4def8;
+    text-shadow: none;
     font-weight: bold;
 }
+
+
+/*BOTONES*/
+
+#btn_sal,
+#btn_alum,
+#btn_mod,
+#btn_not,
+#btn_alumf,
+#btn_notf{
+    display: none;
+}
+#btn_alum1,
+#btn_not1{
+    margin-bottom: .8em;
+    margin-right: .1em;
+}
+
+#btn_alum1f,
+#btn_not1f{
+    margin-right: .1em;
+}
+
+
+
+@media screen and (max-width: 420px) {
+    #btn_sal1,
+    #btn_mod1,
+    #btn_alum1,
+    #btn_not1,
+    #btn_alum1f,
+    #btn_not1f{
+        display: none;
+    }
+    #btn_sal,
+    #btn_mod,
+    #btn_alum,
+    #btn_not,
+    #btn_alumf,
+    #btn_notf{
+        display: inline;
+        padding: 1.3em;
+    }
+    #btn_alum,
+    #btn_not{
+        margin-bottom: .8em;
+        margin-right: .1em;
+    }
+    .mod {
+        font-size: .9em !important;
+    }
+    /*
+    fieldset label{
+        font-size: .9em !important;
+    }*/
+}
+
+
+/*BLOQUES DE CALIFICACION*/
+
+fieldset {
+    background: #007dd0;
+    margin-bottom: 1em !important;
+}
+
+fieldset legend[class="val"] {
+    margin-bottom: -1em;
+    text-align: center;
+    color: white;
+    text-shadow: none;
+}
+
+fieldset legend{
+    padding: 1em;
+}
+
+label input{
+    margin-left: 2em;
+}
+
+.ui-controlgroup-vertical .ui-btn.ui-first-child {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+@media screen and (max-width: 49em) {
+    
+    .ui-field-contain > label, .ui-field-contain .ui-controlgroup-label, .ui-field-contain > .ui-rangeslider > label {
+        float: none;
+        margin: 0;
+        width: auto;
+    }
+    .ui-field-contain .ui-controlgroup, .ui-field-contain fieldset.ui-controlgroup {
+        margin: 0;
+    }
+    .ui-field-contain > label ~ [class*="ui-"], .ui-field-contain .ui-controlgroup-controls {
+        float: none;
+        width: auto;
+    }
+}
+
+@media screen and (min-width: 49em) {
+    .ui-grid-c > .ui-block-a, .ui-grid-c > .ui-block-b, .ui-grid-c > .ui-block-c, .ui-grid-c > .ui-block-d {
+        width: 25%;
+    }
+    .ui-controlgroup-vertical .ui-btn.ui-first-child {
+        border-top-right-radius: inherit;
+    }
+    .ui-controlgroup-vertical .ui-btn.ui-last-child {
+        border-bottom-left-radius: 0;
+    }
+    .ui-field-contain > label ~ [class*="ui-"], .ui-field-contain .ui-controlgroup-controls {
+        float: left;
+        width: 78%;
+    }
+}
+
+
+/* POPUPS DE AYUDA */
+#ayuda_val1{
+    max-width:350px;
+}
+
+
+
+/*FONDOS*/
 
 #login {
     background-color: white;
 }
-
 #seleccion {
     background-color: #c4def8;
 }
-
 #calificacion {
     background-color: white;
 }
-
-#btn_sal,
-#btn_alum {
-    display: none;
-}
-
-@media screen and (max-width: 520px) {
-    #btn_sal1,
-    #btn_alum1 {
-        display: none;
-    }
-    #btn_sal,
-    #btn_alum {
-        display: inline;
-        padding: 1.3em;
-    }
-}
-
-/*
-#val1{
-    float:left;
-}
-*/
-/*
-#val1:before {
-   content:hhhh;
-}
-
-/*
-<div data-role="navbar" data-iconpos="left" class="ui-navbar" role="navigation">
-                <ul class="ui-grid-a">
-                    <li class="ui-block-b">
-                        <a href="#calificacion" class="ui-btn-active ui-state-persist ui-link ui-btn ui-btn-icon-top ui-icon-check" title="Califica la presentacion oral">EXPRESIÓN ORAL</a>
-                        <a id="info_panel" href="#ayuda_entrada" data-role="button" class="ui-btn-left" data-icon="info" data-iconpos="notext" data-rel="close" title="¿Qué valorar en entrada?"></a>
-                    </li>
-                </ul>
-            </div>
-*/
