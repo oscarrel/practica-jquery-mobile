@@ -1,89 +1,343 @@
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
+.ui-page {
+    -webkit-backface-visibility: hidden;
 }
 
-/* Space out content a bit */
-body {
-  padding-top: 20px;
-  padding-bottom: 20px;
+.ui-header,
+.ui-bar-a {
+    border-top-width: 1px;
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
+.ui-mobile label,
+div.ui-controlgroup-label {
+    font-weight: bold;
 }
 
-/* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
+.ui-input-text,
+.ui-input-search {
+    border-width: 0;
 }
 
-/* Make the masthead heading the same height as the navigation */
-.header h3 {
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: 40px;
-  padding-bottom: 19px;
+div.ui-controlgroup-label {
+    margin: 0 0 0 15px !important;
+}
+/*BOTON DEL PIE*/
+
+.footer-button-left,
+.footer-button-right {
+    position: absolute;
+    margin: 0;
+    top: auto;
+    bottom: 0.24em;
 }
 
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
+.footer-button-left {
+    left: 0.4em;
 }
 
-.container-narrow > hr {
-  margin: 30px 0;
+.footer-button-right {
+    right: 0.4em;
+}
+/*BOTON DE LA CABECERA*/
+
+.header-button-left,
+.header-button-right {
+    position: absolute;
+    margin: 0;
+    top: auto;
+    bottom: 0.24em;
 }
 
-/* Main marketing message and sign up button */
-.jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
+.header-button-left {
+    left: 0.4em;
 }
 
-.jumbotron .btn {
-  font-size: 21px;
-  padding: 14px 24px;
+.header-button-right {
+    right: 0.4em;
 }
 
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
+.ui-input-text.ui-body-inherit.ui-corner-all.ui-shadow-inset.ui-input-has-clear {
+    margin-bottom: 10px;
 }
 
-.marketing p + h4 {
-  margin-top: 28px;
+#selecciona {
+    padding: .1em 1em .1em 1em;
 }
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
+/*BOTONES*/
 
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
+#btn_sal,#btn_sal1,#fsal,#fsal1{
+    background-color: #dd270e;
 }
+
+#btn_mod,#btn_mod1,#fmod,#fmod1{
+    background-color: #93278f;
+}
+
+#btn_alum,#btn_alum1,#falu,#falu1{
+    background-color: #662d91;
+}
+
+#btn_not,#btn_not1,#fnot,#fnot1,#panel1_but,#panel2_but{
+    background-color: #8cc63f;
+}
+
+#btn_cal,#btn_cal1,#fcal,#fcal1,#oralf{
+    background-color: #0071bc;
+}
+
+#btn_sal,
+#btn_alum,
+#btn_mod,
+#btn_not,
+#btn_cal,
+#btn_sal1,
+#btn_mod1,
+#btn_alum1,
+#btn_not1,
+#btn_cal1,
+#fsal,
+#fmod,
+#falu,
+#fnot,
+#fcal,
+#fsal1,
+#fmod1,
+#falu1,
+#fnot1,
+#fcal1{
+    border-right-width: thin;
+    color: #ffffff;
+    text-shadow: 0 1px 0 #444444;
+}  
+
+#btn_sal,
+#btn_alum,
+#btn_mod,
+#btn_not,
+#btn_cal,
+#fsal,
+#fmod,
+#falu,
+#fnot,
+#fcal{
+    display: none;
+}
+
+#btn_alum1,
+#btn_not1,
+#btn_cal1{
+    margin-bottom: .8em;
+    margin-right: .1em;
+}
+
+#piecrit{
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+
+@media screen and (max-width: 420px) {
+    #btn_sal1,
+    #btn_mod1,
+    #btn_alum1,
+    #btn_not1,
+    #btn_cal1,
+    #fsal1,
+    #fmod1,
+    #falu1,
+    #fnot1,
+    #fcal1{
+        display: none;
+    }
+    #btn_sal,
+    #btn_mod,
+    #btn_alum,
+    #btn_not,
+    #btn_cal{
+        display: inline;
+        padding: 1.3em;
+    }
+    #btn_alum,
+    #btn_not,
+    #btn_cal{
+        margin-bottom: .8em;
+        margin-right: .1em;
+    }
+    #fsal,
+    #fmod,
+    #falu,
+    #fnot,
+    #fcal{
+        display: inline;
+        padding: 2em;
+    }
+    
+    #fsal:after,
+    #fmod:after,
+    #falu:after,
+    #fnot:after,
+    #fcal:after{
+        left: .8em;
+    }
+    
+    .mod {
+        font-size: .9em !important;
+    }
+
+    #piecrit a {
+        font-size: .6em !important;
+        margin-left: 18%;
+    }
+
+}
+
+/*BLOQUES DE CALIFICACION*/
+
+fieldset {
+    /*background: #007dd0;*/
+    background-color: #cce9fc;
+    margin-bottom: 1em !important;
+}
+
+fieldset legend[class="val"] {
+    margin-bottom: -1em;
+    text-align: center;
+    color: #605c5c;
+    text-shadow: none;
+}
+
+fieldset legend {
+    padding: 1em;
+}
+
+label input {
+    margin-left: 2em;
+}
+
+.ui-controlgroup-vertical .ui-btn.ui-first-child {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+@media screen and (max-width: 49em) {
+    .ui-field-contain > label,
+    .ui-field-contain .ui-controlgroup-label,
+    .ui-field-contain > .ui-rangeslider > label {
+        float: none;
+        margin: 0;
+        width: auto;
+    }
+    .ui-field-contain .ui-controlgroup,
+    .ui-field-contain fieldset.ui-controlgroup {
+        margin: 0;
+    }
+    .ui-field-contain > label ~ [class*="ui-"],
+    .ui-field-contain .ui-controlgroup-controls {
+        float: none;
+        width: auto;
+    }
+}
+
+@media screen and (min-width: 49em) {
+    .ui-grid-c > .ui-block-a,
+    .ui-grid-c > .ui-block-b,
+    .ui-grid-c > .ui-block-c,
+    .ui-grid-c > .ui-block-d {
+        width: 25%;
+    }
+    .ui-controlgroup-vertical .ui-btn.ui-first-child {
+        border-top-right-radius: inherit;
+    }
+    .ui-controlgroup-vertical .ui-btn.ui-last-child {
+        border-bottom-left-radius: 0;
+    }
+    .ui-field-contain > label ~ [class*="ui-"],
+    .ui-field-contain .ui-controlgroup-controls {
+        float: left;
+        width: 78%;
+    }
+}
+
+.checking {
+    width: 40%;
+    float: left;
+    margin: 1em 3em 2em .2em;
+}
+
+.ayuda {
+    margin-left: .7em;
+}
+
+.ui-block-b{
+    padding-left: 2em;
+}
+
+.ui-checkbox input.custom {
+    margin: .7em 0 0 .1em;
+}
+
+.ui-btn.checking {
+    padding: .8em 3em;
+}
+
+#exp {
+    margin-top: 1em;
+}
+
+.ui-checkbox input.grupo {
+    margin: -.7em 0 0 .1em;
+}
+/* POPUPS DE AYUDA */
+
+#ayuda_val1 {
+    max-width: 350px;
+}
+
+/*FONDOS Y TEMAS*/
+
+.log{
+    padding: 1em;
+    background-color: #fde4cf;
+    color: #605c5c;
+    text-shadow: none;
+}
+
+.modu{
+    padding: 1em;
+    background-color: #e6d1f8;
+    color: #605c5c;
+    text-shadow: none;
+}
+
+.alu{
+    padding: 1em;
+    background-color: #e4d9fc;
+    color: #605c5c;
+    text-shadow: none;
+}
+
+.not{
+    padding: 1em;
+    background-color: #e3fcc1;
+    color: #605c5c;
+    text-shadow: none;
+}
+
+.ui-panel{
+    width: 75%;
+}
+
+.peq{
+    font-size: .9em;
+    color: #918d8d;
+}
+
+.imp{
+    font-weight: bold;
+}
+
+#presentacion, #exporal, #contenido{
+    margin-bottom: 1.5em;
+}
+
+
+

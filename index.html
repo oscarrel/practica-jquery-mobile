@@ -5,10 +5,10 @@
     <title>Practica jquery-mobile</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="themes/CalificApp.min.css" />
+    <link rel="stylesheet" href="themes/4themes.min.css" />
     <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
-    <link rel="stylesheet" href="styles/main_n.css" />
+    <link rel="stylesheet" href="styles/main.css" />
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <!--<script src="scripts/main.js"></script>-->
@@ -17,7 +17,7 @@
 <body class="ui-mobile-viewport ui-overlay-a">
 
     <!-- Comienzo pagina 1: #login -->
-    <div id="login" data-role="page" data-url="login" tabindex="0" class="ui-page ui-page-active" style="">
+    <div data-theme="a" id="login" data-role="page" data-url="login" tabindex="0" class="ui-page ui-page-active">
 
         <!-- Empieza header -->
         <div data-role="header" role="banner" class="ui-header ui-bar-a">
@@ -28,14 +28,14 @@
         <!-- Empieza navbar -->
         <div data-role="navbar" data-iconpos="left" class="ui-navbar" role="navigation">
             <ul class="ui-grid-a">
-                <li class="ui-block-b"><a href="#login" class="ui-btn-active ui-state-persist ui-link ui-btn ui-btn-icon-top ui-icon-home" title="Introduce datos para loguearte">LOGIN</a>
+                <li class="ui-block-a"><a href="#login" class="ui-btn-active ui-state-persist ui-link ui-btn ui-btn-icon-top ui-icon-home" title="Introduce datos para loguearte">LOGIN</a>
                 </li>
             </ul>
         </div>
         <!-- /navbar -->
         <!-- Empieza content -->
         <form class="ui-content" role="main">
-            <div class="ui-field-contain">
+            <div class="log ui-field-contain ui-corner-all">
                 <label for="usuario">Usuario</label>
                 <input type="text" data-clear-btn="true" name="usuario" id="usuario" placeholder="Introduce nombre de usuario" value="" title="  Introduce nombre de usuario  ">
                 <label for="pass">Password</label>
@@ -53,11 +53,12 @@
     <!-- /pagina 1 -->
 
     <!-- Comienzo pagina 2: #seleccion1 -->
-    <div data-theme="a" id="seleccion1" data-role="page" data-url="seleccion1">
+    <div data-theme="b" id="seleccion1" data-role="page" data-url="seleccion1">
         <!-- Empieza header -->
-        <div data-theme="a" data-role="header" role="contentinfo" class="ui-header ui-bar-a">
+        <div data-role="header" role="contentinfo" class="ui-header ui-bar-a">
             <h4 class="ui-title" role="heading" aria-level="1">CalificApp</h4>
-            <a href="#login" data-transition="slide" data-direction="reverse" data-icon="power" class="ui-btn-right">SALIR</a>
+            <a id="btn_sal1" href="#login" data-transition="slide" data-direction="reverse" data-icon="power" class="ui-btn-right">SALIR</a>
+            <a id="btn_sal" href="#login" data-transition="slide" data-direction="reverse" data-icon="power" class="ui-btn-right" title="Volver al login"></a>
         </div>
         <!-- /header -->
         <!-- Empieza navbar -->
@@ -69,10 +70,10 @@
         </div>
         <!-- /navbar -->
         <!-- Empieza content -->
-        <div data-role="main" class="ui-content">
+        <div data-role="main" class="modu ui-field-contain ui-corner-all">
 
             <label for="famprof" class="select">Selecciona un módulo:</label>
-            <div class="ui-corner-all" data-role="collapsibleset" data-corners="false" data-theme="a" data-content-theme="a">
+            <div class="ui-corner-all" data-role="collapsibleset" data-corners="false">
                 <div data-role="collapsible" data-filtertext="Comercio_y_Marketing">
                     <h3>Comercio y Marketing</h3>
                     <ul data-role="listview" data-inset="false">
@@ -123,9 +124,10 @@
         <!-- /content -->
 
         <!-- Empieza footer -->
-        <div data-theme="a" data-role="footer" role="contentinfo" class="ui-footer ui-bar-a">
+        <div data-role="footer" role="contentinfo" class="ui-footer ui-bar-a">
             <h4 class="ui-title" role="heading" aria-level="1">CalificApp</h4>
-            <a href="#login" data-transition="slide" data-direction="reverse" class="ui-btn ui-corner-all ui-btn-inline ui-mini footer-button-right ui-btn-icon-left ui-icon-power" title="Volver al login">SALIR</a>
+            <a id="btn_sal1" href="#login" data-transition="slide" data-direction="reverse" class="ui-btn ui-corner-all ui-btn-inline ui-mini footer-button-right ui-btn-icon-left ui-icon-power" title="Volver al login">SALIR</a>
+            <a id="btn_sal" href="#login" data-transition="slide" data-direction="reverse" class="ui-btn ui-corner-all ui-btn-inline ui-mini footer-button-right ui-btn-icon-left ui-icon-power" title="Volver al login"></a>
         </div>
         <!-- /footer -->
     </div>
@@ -133,7 +135,7 @@
 
 
     <!-- Comienzo pagina 3: #seleccion2 -->
-    <div data-role="page" id="seleccion2">
+    <div data-theme="e" data-role="page" id="seleccion2">
         <!-- Empieza header -->
         <div data-role="header" role="banner" class="ui-header ui-bar-a">
             <h1 class="ui-title" role="heading" aria-level="1">CalificApp</h1>
@@ -153,7 +155,7 @@
         </div>
         <!-- /navbar -->
         <!-- Empieza content -->
-        <div data-role="main" class="ui-content">
+        <div data-role="main" class="alu ui-field-contain ui-corner-all">
             <label for="alumno" class="select">Seleccione alumno:</label>
             <form>
                 <input data-type="search" id="filterControlgroup-input" placeholder="  Introduce alumno  ">
@@ -171,7 +173,7 @@
         </div>
         <!-- /content -->
         <!-- Empieza footer -->
-        <div data-theme="a" data-role="footer" role="contentinfo" class="ui-footer ui-bar-a">
+        <div data-theme="e" data-role="footer" role="contentinfo" class="ui-footer ui-bar-a">
             <h4 class="ui-title" role="heading" aria-level="1">CalificApp</h4>
             <a id="btn_sal1" href="#login" data-transition="slide" data-direction="reverse" class="ui-btn ui-corner-all ui-btn-inline ui-mini footer-button-right ui-btn-icon-left ui-icon-power" title="Volver al login">SALIR</a>
             <a id="btn_mod1" href="#seleccion1" data-transition="slide" data-direction="reverse" class="ui-btn ui-corner-all ui-btn-inline ui-mini footer-button-left ui-btn-icon-left ui-icon-bars" title="Volver a seleccionar módulo">MÓDULO</a>
@@ -184,7 +186,7 @@
 
 
     <!-- Comienzo pagina 4: #calificacion -->
-    <div data-theme="a" id="calificacion" data-role="page" data-url="calificacion">
+    <div data-theme="c" id="calificacion" data-role="page" data-url="calificacion">
         <!--Empieza panel
         <div data-role="panel" data-position="right" data-display="overlay" data-theme="a" id="ayuda_entrada">
             <p>Valora la entrada del alumno, si saluda, si se dirige correctamente al público</p>
@@ -221,7 +223,7 @@
                 <!--Entrada-->
                 <legend class="val"><b>Entrada del alumno</b>
                     <a href="#ayuda_val1" data-rel="popup" data-transition="pop" class="ayuda my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext ui-corner-all" title="Qué valorar en la entrada"></a>
-                    <div data-role="popup" id="ayuda_val1" class="ui-content" data-theme="a">
+                    <div data-role="popup" id="ayuda_val1" class="ui-content" data-theme="c">
                         <p>En la entrada del alumno se valorarán cosas relativas a la educación y el protocolo. Si saluda, si se dirige correctamente e los asistentes, etc...</p>
                     </div>
                 </legend>
@@ -236,7 +238,7 @@
             <fieldset data-role="controlgroup">
                 <legend class="val"><b>Indumentaria</b>
                     <a href="#ayuda_val2" data-rel="popup" data-transition="pop" class="ayuda my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext ui-corner-all" title="Qué valorar en la indumentaria"></a>
-                    <div data-role="popup" id="ayuda_val2" class="ui-content" data-theme="a">
+                    <div data-role="popup" id="ayuda_val2" class="ui-content" data-theme="c">
                         <p>En la indumentaria del alumno se valorará la higiene, limpieza y pulcritud en la vestimenta. No el estilo</p>
                     </div>
                 </legend>
@@ -252,7 +254,7 @@
                 <input type="checkbox" name="rc3" id="rc3" class="custom">Introducción
             </label>
             <a href="#ayuda_val3" data-rel="popup" data-transition="pop" class="ayuda my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext ui-corner-all" title="Qué valorar en la introducción"></a>
-            <div data-role="popup" id="ayuda_val3" class="ui-content" data-theme="a">
+            <div data-role="popup" id="ayuda_val3" class="ui-content" data-theme="c">
                 <p>Se valoran cuestiones como: ¿Es atractiva? ¿Queda claro el proyecto?. Si la respuesta es positiva marcar el campo</p>
             </div>
 
@@ -261,7 +263,7 @@
                 <input type="checkbox" name="rc4" id="rc4" class="custom">Desarrollo
             </label>
             <a href="#ayuda_val4" data-rel="popup" data-transition="pop" class="ayuda my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext ui-corner-all" title="Qué valorar en el desarrollo"></a>
-            <div data-role="popup" id="ayuda_val4" class="ui-content" data-theme="a">
+            <div data-role="popup" id="ayuda_val4" class="ui-content" data-theme="c">
                 <p>Se valora de forma afirmativa si hay:</br>
                     - Orden en las ideas</br>
                     - Claridad en la exposición</br>
@@ -274,7 +276,7 @@
                 <input type="checkbox" name="rc5" id="rc5" class="custom">Conclusión
             </label>
             <a href="#ayuda_val5" data-rel="popup" data-transition="pop" class="ayuda my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext ui-corner-all" title="Qué valorar en la conclusión"></a>
-            <div data-role="popup" id="ayuda_val5" class="ui-content" data-theme="a">
+            <div data-role="popup" id="ayuda_val5" class="ui-content" data-theme="c">
                 <p>Se valora de forma afirmativa si:</br>
                     - Queda claro el objetivo del proyecto</br>
                     - Lo vende bien</br>
@@ -286,7 +288,7 @@
                 <input type="checkbox" name="rc6" id="rc6" class="custom">Seguridad
             </label>
             <a href="#ayuda_val6" data-rel="popup" data-transition="pop" class="ayuda my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext ui-corner-all" title="Qué valorar en la seguridad"></a>
-            <div data-role="popup" id="ayuda_val6" class="ui-content" data-theme="a">
+            <div data-role="popup" id="ayuda_val6" class="ui-content" data-theme="c">
                 <p>Se valora si hay seguridad en lo que expone y si la presentación está trabajada (uso correcto de power-point u otros con discurso bien preparado). Si la respuesta es positiva marcar el campo</p>
             </div>
 
@@ -295,7 +297,7 @@
                 <input type="checkbox" name="rc7" id="rc7" class="custom">Entusiasmo
             </label>
             <a href="#ayuda_val7" data-rel="popup" data-transition="pop" class="ayuda my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext ui-corner-all" title="Qué valorar en el entusiasmo"></a>
-            <div data-role="popup" id="ayuda_val7" class="ui-content" data-theme="a">
+            <div data-role="popup" id="ayuda_val7" class="ui-content" data-theme="c">
                 <p>Se valora si el alumno demuestra entusiasmo en lo que expone. Si la respuesta es positiva marcar el campo</p>
             </div>
 
@@ -303,14 +305,14 @@
             <fieldset id="exp" data-role="controlgroup">
                 <legend class="val"><b>Expresión Oral</b>
                     <a href="#ayuda_val8" data-rel="popup" data-transition="pop" class="ayuda my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext ui-corner-all" title="Qué valorar en la expresión oral"></a>
-                    <div data-role="popup" id="ayuda_val8" class="ui-content" data-theme="a">
+                    <div data-role="popup" id="ayuda_val8" class="ui-content" data-theme="c">
                         <p>En la expresión oral del alumno se valorarán los siguientes aspectos:</br>
                             - Entonación: Marcar si es correcta.</br>
                             - Volumen: Marcar si es el adecuado.</br>
                             - Velocidad: Marcar si usa una velocidad correcta.</br>
                             - No Vacilación en la voz: Marcar si demuestra seguridad.</br>
-                            - Pausas: Marcar si hace las pausas adecuadas. </br>
-                            - Muletillas: Marcar si NO hace uso de muletillas. </br>
+                            - Pausas: Marcar si hace las pausas adecuadas.</br>
+                            - Muletillas: Marcar si NO hace uso de muletillas.</br>
                         </p>
                     </div>
                 </legend>
@@ -339,7 +341,7 @@
                 <input type="checkbox" name="rc14" id="rc14" class="custom">Duración
             </label>
             <a href="#ayuda_val9" data-rel="popup" data-transition="pop" class="ayuda my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext ui-corner-all" title="Qué valorar en la duración"></a>
-            <div data-role="popup" id="ayuda_val9" class="ui-content" data-theme="a">
+            <div data-role="popup" id="ayuda_val9" class="ui-content" data-theme="c">
                 <p>Se valora que el alumno se ajuste al tiempo estipulado. Si la respuesta es positiva marcar el campo</p>
             </div>
 
@@ -348,7 +350,7 @@
             <fieldset id="exp" data-role="controlgroup">
                 <legend class="val"><b>Lenguaje NO verbal</b>
                     <a href="#ayuda_val10" data-rel="popup" data-transition="pop" class="ayuda my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext ui-corner-all" title="Qué valorar en el lenguaje no verbal"></a>
-                    <div data-role="popup" id="ayuda_val10" class="ui-content" data-theme="a">
+                    <div data-role="popup" id="ayuda_val10" class="ui-content" data-theme="c">
                         <p>En el lenguaje no verbal se valorarán los siguientes aspectos:</br>
                             - Mirada: Marcar si dirige la mirada a todo el auditorio.</br>
                             - Expresion facial: Marcar si sonrie o mantiene una expresión facial positiva.</br>
@@ -373,10 +375,10 @@
 
             <!--Atencion del publico-->
             <label class="checking">
-                <input type="checkbox" name="rc19" id="rc19" class="custom">Atrae Atención
+                <input type="checkbox" name="rc19" id="rc19" class="custom">Atención
             </label>
             <a href="#ayuda_val11" data-rel="popup" data-transition="pop" class="ayuda my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext ui-corner-all" title="Qué valorar en la atención al público"></a>
-            <div data-role="popup" id="ayuda_val11" class="ui-content" data-theme="a">
+            <div data-role="popup" id="ayuda_val11" class="ui-content" data-theme="c">
                 <p>Se valora que el alumno logre atraer la atención del público. Si la respuesta es positiva marcar el campo</p>
             </div>
 
@@ -384,8 +386,8 @@
             <label class="checking">
                 <input type="checkbox" name="rc20" id="rc20" class="custom">Respuestas
             </label>
-            <a href="#ayuda_val11" data-rel="popup" data-transition="pop" class="ayuda my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext ui-corner-all" title="Qué valorar en la respuesta a las preguntas"></a>
-            <div data-role="popup" id="ayuda_val11" class="ui-content" data-theme="a">
+            <a href="#ayuda_val12" data-rel="popup" data-transition="pop" class="ayuda my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext ui-corner-all" title="Qué valorar en la respuesta a las preguntas"></a>
+            <div data-role="popup" id="ayuda_val12" class="ui-content" data-theme="c">
                 <p>Se valora que el alumno responda de forma coherente a las preguntas del público. Si la respuesta es positiva marcar el campo</p>
             </div>
 
@@ -393,47 +395,53 @@
         <!-- /content -->
 
         <!--Empieza footer -->
-        <!--
-        <div data-theme="a" data-role="footer" role="contentinfo" class="ui-footer ui-bar-a">
-            <h4 class="ui-title" role="heading" aria-level="1">CalificApp</h4>
-            <a id="btn_alum1f" href="#seleccion2" data-transition="slide" data-direction="reverse" class="ui-btn ui-corner-all ui-btn-inline ui-mini footer-button-left ui-btn-icon-left ui-icon-user" title="Volver a seleccionar alumno">ALUMNO</a>
-            <a id="btn_not1f" href="#notas" data-transition="slide" class="ui-btn ui-corner-all ui-btn-inline ui-mini footer-button-right ui-btn-icon-left ui-icon-star" title="Asignar notas">NOTA</a>
-            <a id="btn_alumf" href="#seleccion2" data-transition="slide" data-direction="reverse" class="ui-btn ui-corner-all ui-btn-inline ui-mini footer-button-left ui-btn-icon-left ui-icon-user" title="Volver a seleccionar alumno"></a>
-            <a id="btn_notf" href="#notas" data-transition="slide" class="ui-btn ui-corner-all ui-btn-inline ui-mini footer-button-right ui-btn-icon-left ui-icon-star" title="Asignar notas"></a>
-        </div>
-        -->
 
-        <div id="piecrit" data-role="footer">
-            <div data-role="navbar" data-iconpos="right">
-                <ul>
-                    <li><a href="#" data-icon="user">ALUMNO</a>
+        <div id="piecrit" data-theme="c" data-role="footer" class="ui-bar">
+            <div data-role="navbar" data-iconpos="left" class="ui-navbar" role="navigation">
+                <ul class="ui-grid-a">
+                    <li class="ui-block-a">
+                        <a id="falu1" href="#seleccion2" data-transition="slide" data-direction="reverse" data-icon="user" class="ui-btn ui-corner-all ui-btn-inline" title="Volver a seleccionar alumno">ALUMNO</a>
+                        <a id="falu" href="#seleccion2" data-transition="slide" data-direction="reverse" data-icon="user" class="ui-btn ui-corner-all ui-btn-inline" title="Volver a seleccionar alumno"></a>
                     </li>
-                    <li><a href="#" data-icon="bars">MÓDULO</a>
+                    <li class="ui-block-b">
+                        <a id="fmod1" href="#seleccion1" data-transition="slide" data-direction="reverse" class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-bars" title="Volver a seleccionar módulo">MÓDULO</a>
+                        <a id="fmod" href="#seleccion1" data-transition="slide" data-direction="reverse" class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-bars" title="Volver a seleccionar módulo"></a>
                     </li>
-                    <li><a href="#" data-icon="star">NOTAS</a>
+                    <li class="ui-block-c">
+                        <a id="fnot1" href="#notas" data-transition="slide" class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-star" title="Asignar notas finales">NOTAS</a>
+                        <a id="fnot" href="#notas" data-transition="slide" class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-star" title="Asignar notas finales"></a>
                     </li>
-                    <li><a href="#" data-icon="power">SALIR</a>
+                    <li class="ui-block-d">
+                        <a id="fsal1" href="#login" data-transition="slide" data-direction="reverse" class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-power" title="Salir al login">SALIR</a>
+                        <a id="fsal" href="#login" data-transition="slide" data-direction="reverse" class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-power" title="Salir al login"></a>
                     </li>
                 </ul>
             </div>
-            <!-- /navbar -->
         </div>
         <!-- /footer -->
-        <!-- /footer -->
+
     </div>
     <!-- /pagina 4 -->
 
 
-
-
-
-
-
-
-
-
     <!-- Comienzo pagina 5: #notas -->
-    <div data-role="page" id="notas">
+    <div data-theme="d" data-role="page" id="notas">
+
+        <!-- Comienzo panel1-->
+        <div data-role="panel" data-position="right" data-display="overlay" data-theme="d" id="panel1">
+            <p>Para valorar el contenido del proyecto hay que tener en cuenta los siguientes aspectos:</br>
+                </br>- <span class="imp">Planteamiento:</span> Objetivos, Recursos utilizados, Destinatarios, Justificación del proyecto</br>
+                </br>- <span class="imp">Contenido:</span> Metodología seguida, Claridad, Actividades o acciones realizadas, Documentación elaborada</br>
+                </br>- <span class="imp">Resultados obtenidos:</span> Conclusiones, Objetivos conseguidos y grado de consecución</p>
+            <a href="#panel1_but" data-rel="close" data-role="button" data-icon="delete" data-iconpos="notext"></a>
+        </div>
+
+        <!-- Comienzo panel2-->
+        <div data-role="panel" data-position="right" data-display="overlay" data-theme="d" id="panel2">
+            <p>Para valorar la calidad de la presentación hay que tener en cuenta los siguientes aspectos:</br>- Presentación escrita</br>- Redacción y claridad del texto</br>- Organización del contenido</p>
+            <a href="#panel2_but" data-rel="close" data-role="button" data-icon="delete" data-iconpos="notext"></a>
+        </div>
+
         <!-- Empieza header -->
         <div data-role="header" role="banner" class="ui-header ui-bar-a">
             <h1 class="ui-title" role="heading" aria-level="1">CalificApp</h1>
@@ -450,27 +458,88 @@
                 <li class="ui-block-b">
                     <a class="ui-btn-active ui-state-persist ui-link ui-btn ui-btn-icon-top ui-icon-star" title="Selecciona al alumno">NOTAS</a>
                     <a id="btn_alum1" href="#seleccion2" data-transition="slide" data-direction="reverse" class="ui-btn ui-corner-all ui-btn-inline ui-mini footer-button-left ui-btn-icon-left ui-icon-user" title="Volver a seleccionar alumno">ALUMNO</a>
-                    <a id="btn_not1" href="#calificacion" data-transition="slide" data-direction="reverse" class="ui-btn ui-corner-all ui-btn-inline ui-mini footer-button-right ui-btn-icon-left ui-icon-check" title="Valoración de la Expresión Oral">ORAL</a>
+                    <a id="btn_cal1" href="#calificacion" data-transition="slide" data-direction="reverse" class="ui-btn ui-corner-all ui-btn-inline ui-mini footer-button-right ui-btn-icon-left ui-icon-check" title="Valoración de la Expresión Oral">ORAL</a>
                     <a id="btn_alum" href="#seleccion2" data-transition="slide" data-direction="reverse" class="ui-btn ui-corner-all ui-btn-inline ui-mini footer-button-left ui-btn-icon-left ui-icon-user" title="Volver a seleccionar alumno"></a>
-                    <a id="btn_not" href="#calificacion" data-transition="slide" data-direction="reverse" class="ui-btn ui-corner-all ui-btn-inline ui-mini footer-button-right ui-btn-icon-left ui-icon-check" title="Valoración de la Expresión Oral"></a>
+                    <a id="btn_cal" href="#calificacion" data-transition="slide" data-direction="reverse" class="ui-btn ui-corner-all ui-btn-inline ui-mini footer-button-right ui-btn-icon-left ui-icon-check" title="Valoración de la Expresión Oral"></a>
                 </li>
             </ul>
         </div>
 
         <!-- /navbar -->
         <!--Empieza content -->
-        <div class="ui-field-contain">
+        <div data-role="main" class="not ui-field-contain ui-corner-all">
             <form id="notasForm" action="#" method="POST">
-                <label for="contenido">Contenido del Proyecto</br>(Max: 6.5 - 65%)</label>
+                <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                        <label for="contenido" title="Nota del contenido del proyecto">Contenido del Proyecto</br><span class="peq"> Max: 6.5 - 65%</span>
+                        </label>
+                    </div>
+                    <div class="ui-block-b">
+                        <div id="custom-border-radius">
+                            <a id="panel1_but" href="#panel1" class="ui-btn ui-icon-info ui-btn-icon-notext ui-corner-all"></a>
+                        </div>
+                    </div>
+                </div>
                 <input type="number" name="contenido" id="contenido" step="any" min="0" max="6.5" placeholder="Introduzca nota" />
-                <label for="presentacion">Calidad de Presentación</br>(Max: 1 - 10%)</label>
+
+
+                <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                        <label class="notasfin" for="presentacion" title="Nota de la calidad de la presentación">Calidad de Presentación</br><span class="peq">Max: 1 - 10%</span>
+                        </label>
+                    </div>
+                    <div class="ui-block-b">
+                        <div id="custom-border-radius">
+                            <a id="panel2_but" href="#panel2" class="ui-btn ui-icon-info ui-btn-icon-notext ui-corner-all"></a>
+                        </div>
+                    </div>
+                </div>
                 <input type="number" name="presentacion" id="presentacion" step="any" min="0" max="1" placeholder="Introduzca nota" />
-                <label for="exporal">Expresión Oral</br>(Max: 2.5 - 25%)</label>
+
+
+                
+                
+                <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                        <label class="notasfin" for="exporal" title="Nota de la Expresión Oral">Expresión Oral</br><span class="peq">Max: 2.5 - 25%</span>
+                </label>
+                    </div>
+                    <div class="ui-block-b">
+                        <div id="custom-border-radius">
+                            <a id="oralf" href="#calificacion" data-transition="slide" data-direction="reverse" class="ui-btn ui-icon-check ui-btn-icon-notext ui-corner-all"></a>
+                        </div>
+                    </div>
+                </div>  
                 <input type="number" name="exporal" id="exporal" step="any" min="0" max="2.5" placeholder="Introduzca nota" />
+
                 <a data-role="button" href="#">CALIFICAR</a>
             </form>
         </div>
+        <!--/content -->
         <!--Empieza footer -->
+
+        <div id="piecrit" data-theme="d" data-role="footer" class="ui-bar">
+            <div data-role="navbar" data-iconpos="left" class="ui-navbar" role="navigation">
+                <ul class="ui-grid-a">
+                    <li class="ui-block-a">
+                        <a id="falu1" href="#seleccion2" data-transition="slide" data-direction="reverse" data-icon="user" class="ui-btn ui-corner-all ui-btn-inline" title="Volver a seleccionar alumno">ALUMNO</a>
+                        <a id="falu" href="#seleccion2" data-transition="slide" data-direction="reverse" data-icon="user" class="ui-btn ui-corner-all ui-btn-inline" title="Volver a seleccionar alumno"></a>
+                    </li>
+                    <li class="ui-block-b">
+                        <a id="fmod1" href="#seleccion1" data-transition="slide" data-direction="reverse" class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-bars" title="Volver a seleccionar módulo">MÓDULO</a>
+                        <a id="fmod" href="#seleccion1" data-transition="slide" data-direction="reverse" class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-bars" title="Volver a seleccionar módulo"></a>
+                    </li>
+                    <li class="ui-block-c">
+                        <a id="fcal1" href="#calificacion" data-transition="slide" data-direction="reverse" class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-check" title="Valorar criterios de expresión oral">ORAL</a>
+                        <a id="fcal" href="#calificacion" data-transition="slide" data-direction="reverse" class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-check" title="Valorar criterios de expresión oral"></a>
+                    </li>
+                    <li class="ui-block-d">
+                        <a id="fsal1" href="#login" data-transition="slide" data-direction="reverse" class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-power" title="Salir al login">SALIR</a>
+                        <a id="fsal" href="#login" data-transition="slide" data-direction="reverse" class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-power" title="Salir al login"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
         <!-- /footer -->
     </div>
     <!-- /pagina 4 -->
